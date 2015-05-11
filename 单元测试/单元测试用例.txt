@@ -1,0 +1,18 @@
+﻿#!/usr/bin/env ruby -w
+# encoding: UTF-8
+begin
+  定义测试集 '时间轴测试' do
+    初始化 {@a = 5}
+    回收 {}
+    
+    添加测试 '结果应该为真' do
+      1 + 1 == 2
+    end
+  
+    添加测试 "初始化测试" do
+      (@a == 5).应该为 true
+    end
+
+  end
+  T测试框架.执行所有测试集
+end
