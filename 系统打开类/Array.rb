@@ -3,6 +3,7 @@
 class Array
   alias :每个 :each
   alias :大小 :size
+  alias :数量 :size
   alias :为空? :empty?
   alias :连接 :join
   alias :重整 :flatten
