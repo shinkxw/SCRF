@@ -12,4 +12,5 @@ class K可视化组件
   private 
   def 实例化;@@未实例化组件.delete(self);执行(实例指令, 100) end
   def 父实例;@父组件.实例 end
+  def method_missing(方法名, *参数);实例.调用(方法名, *参数) end
 end
