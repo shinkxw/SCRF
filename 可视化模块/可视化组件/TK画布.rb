@@ -8,7 +8,7 @@ class TK画布 < K可视化组件
   end
   def 实例指令;"TkCanvas.new(父实例){width #{@宽};height #{@高}}.pack" end
   def 背景色=(背景色);实例.bg(背景色) end
-  def 点转换(点);(@y轴逆转 ? 点.类.new(点.x, @高 - 点.y) : 点) end
+  def 点转换(点);(@y轴逆转 ? 点.类.新建(点.x, @高 - 点.y) : 点) end
 end
 
 class TKC线段 < K可视化组件
