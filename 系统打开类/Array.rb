@@ -6,6 +6,7 @@ class Array
   alias :数量 :size
   alias :为空? :empty?
   alias :连接 :join
+  alias :连接数组 :concat
   alias :重整 :flatten
   alias :重整! :flatten!
   alias :删除 :delete
@@ -13,4 +14,6 @@ class Array
   alias :排序! :sort!
   alias :去重 :uniq
   alias :去重! :uniq!
+  alias :收集 :collect
+  alias :替换 :collect!
 end

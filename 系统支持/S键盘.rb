@@ -3,130 +3,26 @@
 require 'Win32API'
 module S键盘
   @获取按键状态 = Win32API.new("user32","GetAsyncKeyState",['I'],'I')
-  #def self.鼠标左键?;@@获取按键状态.call(0x01) & 0x01 == 1 end
-  def self.A键?;@获取按键状态.call(0x41) & 0x01 == 1 end
+  def self.获取按键数组;@键名数组.找出{|名| 调用(名)}.收集{|名| 名.字符串[0..-2]}.连接(' ') end
   def self.method_missing(方法名, *参数)
-    p 方法名
-    define_method
+    if @键位映射[方法名] != nil
+      定义单例方法(方法名){@获取按键状态.call(@键位映射[方法名]) & 0x01 == 1}
+      调用(方法名)
+    else
+      super
+    end
   end
+  @键名数组 = %w(BACK TAB RETURN SHIFT CTLR ALT PAUSE CAPITAL ESCAPE SPACE PRIOR NEXT END HOME)
+  @键名数组 += %w(LEFT UP RIGHT DOWN SELECT PRINT SNAPSHOTey INSERT DELETE)
+  @键名数组 += %w(0 1 2 3 4 5 6 7 8 9)
+  @键名数组 += %w(A B C D E F G H I J K L M N O P Q R S T U V W X Y Z)
+  @键名数组 += %w(F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12)
+  @键名数组.替换{|键名| (键名 << '?').符号}
+  @键值数组 = [0x08,0x09,0x0D,0x10,0x11,0x12,0x13,0x14,0x1B,0x20,0x21,0x22,0x23,0x24]
+  @键值数组 += [0x25,0x26,0x27,0x28,0x29,0x2A,0x2C,0x2D,0x2E]
+  @键值数组 += [0x30,0x31,0x32,0x33,0x34,0x35,0x36,0x37,0x38,0x39]
+  @键值数组 += [0x41,0x42,0x43,0x44,0x45,0x46,0x47,0x48,0x49,0x4A,0x4B,0x4C,0x4D]
+  @键值数组 += [0x4E,0x4F,0x50,0x51,0x52,0x53,0x54,0x55,0x56,0x57,0x58,0x59,0x5A]
+  @键值数组 += [0x70,0x71,0x72,0x73,0x74,0x75,0x76,0x77,0x78,0x79,0x7A,0x7B]
+  @键位映射 = Hash[*(@键名数组.zip(@键值数组)).flatten]
 end
-#~ loop do
-  #~ p S键盘.A键?
-  #~ sleep 1
-#~ end
-
-  $Rmouse_BUTTON_L = 0x01        # left mouse button
-  $Rmouse_BUTTON_R = 0x02        # right mouse button
-  $Rmouse_BUTTON_M = 0x04        # middle mouse button
-  $Rmouse_BUTTON_4 = 0x05        # 4th mouse button 
-  $Rmouse_BUTTON_5 = 0x06        # 5th mouse button
-  #--------------------------------------------------------------------------
-  $R_Key_BACK      = 0x08        # BACKSPACE key
-  $R_Key_TAB       = 0x09        # TAB key
-  $R_Key_RETURN    = 0x0D        # ENTER key
-  $R_Key_SHIFT     = 0x10        # SHIFT key
-  $R_Key_CTLR      = 0x11        # CTLR key
-  $R_Key_ALT       = 0x12        # ALT key
-  $R_Key_PAUSE     = 0x13        # PAUSE key
-  $R_Key_CAPITAL   = 0x14        # CAPS LOCK key
-  $R_Key_ESCAPE    = 0x1B        # ESC key
-  $R_Key_SPACE     = 0x20        # SPACEBAR
-  $R_Key_PRIOR     = 0x21        # PAGE UP key
-  $R_Key_NEXT      = 0x22        # PAGE DOWN key
-  $R_Key_END       = 0x23        # END key
-  $R_Key_HOME      = 0x24        # HOME key
-  $R_Key_LEFT      = 0x25        # LEFT ARROW key
-  $R_Key_UP        = 0x26        # UP ARROW key
-  $R_Key_RIGHT     = 0x27        # RIGHT ARROW key
-  $R_Key_DOWN      = 0x28        # DOWN ARROW key
-  $R_Key_SELECT    = 0x29        # SELECT key
-  $R_Key_PRINT     = 0x2A        # PRINT key
-  $R_Key_SNAPSHOT  = 0x2C        # PRINT SCREEN key
-  $R_Key_INSERT    = 0x2D        # INS key
-  $R_Key_DELETE    = 0x2E        # DEL key
-  #--------------------------------------------------------------------------
-  $R_Key_0         = 0x30        # 0 key
-  $R_Key_1         = 0x31        # 1 key
-  $R_Key_2         = 0x32        # 2 key
-  $R_Key_3         = 0x33        # 3 key
-  $R_Key_4         = 0x34        # 4 key
-  $R_Key_5         = 0x35        # 5 key
-  $R_Key_6         = 0x36        # 6 key
-  $R_Key_7         = 0x37        # 7 key
-  $R_Key_8         = 0x38        # 8 key
-  $R_Key_9         = 0x39        # 9 key
-  #--------------------------------------------------------------------------
-  $R_Key_A         = 0x41        # A key
-  $R_Key_B         = 0x42        # B key
-  $R_Key_C         = 0x43        # C key
-  $R_Key_D         = 0x44        # D key
-  $R_Key_E         = 0x45        # E key
-  $R_Key_F         = 0x46        # F key
-  $R_Key_G         = 0x47        # G key
-  $R_Key_H         = 0x48        # H key
-  $R_Key_I         = 0x49        # I key
-  $R_Key_J         = 0x4A        # J key
-  $R_Key_K         = 0x4B        # K key
-  $R_Key_L         = 0x4C        # L key
-  $R_Key_M         = 0x4D        # M key
-  $R_Key_N         = 0x4E        # N key
-  $R_Key_O         = 0x4F        # O key
-  $R_Key_P         = 0x50        # P key
-  $R_Key_Q         = 0x51        # Q key
-  $R_Key_R         = 0x52        # R key
-  $R_Key_S         = 0x53        # S key
-  $R_Key_T         = 0x54        # T key
-  $R_Key_U         = 0x55        # U key
-  $R_Key_V         = 0x56        # V key
-  $R_Key_W         = 0x57        # W key
-  $R_Key_X         = 0x58        # X key
-  $R_Key_Y         = 0x59        # Y key
-  $R_Key_Z         = 0x5A        # Z key
-  #--------------------------------------------------------------------------
-  $R_Key_LWIN      = 0x5B        # Left Windows key (Microsoft Natural keyboard) 
-  $R_Key_RWIN      = 0x5C        # Right Windows key (Natural keyboard)
-  $R_Key_APPS      = 0x5D        # Applications key (Natural keyboard)
-  #--------------------------------------------------------------------------
-  $R_Key_NUMPAD0   = 0x60        # Numeric keypad 0 key
-  $R_Key_NUMPAD1   = 0x61        # Numeric keypad 1 key
-  $R_Key_NUMPAD2   = 0x62        # Numeric keypad 2 key
-  $R_Key_NUMPAD3   = 0x63        # Numeric keypad 3 key
-  $R_Key_NUMPAD4   = 0x64        # Numeric keypad 4 key
-  $R_Key_NUMPAD5   = 0x65        # Numeric keypad 5 key
-  $R_Key_NUMPAD6   = 0x66        # Numeric keypad 6 key
-  $R_Key_NUMPAD7   = 0x67        # Numeric keypad 7 key
-  $R_Key_NUMPAD8   = 0x68        # Numeric keypad 8 key
-  $R_Key_NUMPAD9  = 0x69        # Numeric keypad 9 key
-  $R_Key_MULTIPLY  = 0x6A        # Multiply key (*)
-  $R_Key_ADD       = 0x6B        # Add key (+)
-  $R_Key_SEPARATOR = 0x6C        # Separator key
-  $R_Key_SUBTRACT  = 0x6D        # Subtract key (-)
-  $R_Key_DECIMAL   = 0x6E        # Decimal key
-  $R_Key_DIVIDE    = 0x6F        # Divide key (/)
-  #--------------------------------------------------------------------------
-  $R_Key_F1        = 0x70        # F1 key
-  $R_Key_F2        = 0x71        # F2 key
-  $R_Key_F3        = 0x72        # F3 key
-  $R_Key_F4        = 0x73        # F4 key
-  $R_Key_F5        = 0x74        # F5 key
-  $R_Key_F6        = 0x75        # F6 key
-  $R_Key_F7        = 0x76        # F7 key
-  $R_Key_F8        = 0x77        # F8 key
-  $R_Key_F9        = 0x78        # F9 key
-  $R_Key_F10       = 0x79        # F10 key
-  $R_Key_F11       = 0x7A        # F11 key
-  $R_Key_F12       = 0x7B        # F12 key
-  #--------------------------------------------------------------------------
-  $R_Key_NUMLOCK   = 0x90        # NUM LOCK key
-  $R_Key_SCROLL    = 0x91        # SCROLL LOCK key
-  #--------------------------------------------------------------------------
-  $R_Key_LSHIFT    = 0xA0        # Left SHIFT key
-  $R_Key_RSHIFT    = 0xA1        # Right SHIFT key
-  $R_Key_LCONTROL  = 0xA2        # Left CONTROL key
-  $R_Key_RCONTROL  = 0xA3        # Right CONTROL key
-  $R_Key_L_ALT    = 0xA4        # Left ALT key
-  $R_Key_R_ALT    = 0xA5        # Right ALT key
-  #--------------------------------------------------------------------------
-  $R_Key_SEP      = 0xBC        # , key
-  $R_Key_DASH      = 0xBD        # - key
-  $R_Key_DOTT      = 0xBE        # . Key

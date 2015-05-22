@@ -18,7 +18,7 @@ module Kernel
     eval 代码
   end
   def 引发异常(异常类型, 异常信息);raise E异常.new(异常类型, 异常信息) end
-  def 处理异常(异常); yield(异常);引发 异常 if 异常.并未处理? end
+  def 处理异常(异常);yield(异常);引发 异常 if 异常.并未处理? end
   def 耗时;time = Time.now;yield;Time.now - time end
   def 忽略错误(是否显示错误信息 = true)
     yield
