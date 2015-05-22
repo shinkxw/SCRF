@@ -1,31 +1,19 @@
 ﻿#!/usr/bin/env ruby -w
 # encoding: UTF-8
 require 'Win32API'
-class C键盘
-  @@当前, @@上次 = Array.new(163, false), Array.new(163, false)
-  @@获取键盘状态 = Win32API.new("user32", "GetKeyboardState", 'p', 'i')
-  @@获取按键状态 = Win32API.new("user32","GetAsyncKeyState",['I'],'I')
-  @@last_buf = ''
-  def self.刷新
-    buf = Array.new(256,0).pack('c*')
-    if @@获取键盘状态.call(buf) != 0
-      p '!' if buf != @@last_buf
-      @@last_buf = buf
-      
-      buf = buf.unpack 'c*'
-      @@上次, @@当前 = @@当前, @@上次.fill{|i| buf[i] & 0x80 != 0}
-    end
+module S键盘
+  @获取按键状态 = Win32API.new("user32","GetAsyncKeyState",['I'],'I')
+  #def self.鼠标左键?;@@获取按键状态.call(0x01) & 0x01 == 1 end
+  def self.A键?;@获取按键状态.call(0x41) & 0x01 == 1 end
+  def self.method_missing(方法名, *参数)
+    p 方法名
+    define_method
   end
-  def self.按下?(i);@@当前[i] end
-  def self.点击?(i);@@当前[i] && !@@上次[i] end
-  def self.松开?(i);@@上次[i] && !@@当前[i] end
-  def self.A键?;@@获取按键状态.call(0x41) & 0x01 == 1 end
 end
-loop do
-  C键盘.刷新
-  p C键盘.A键?
-  sleep 1
-end
+#~ loop do
+  #~ p S键盘.A键?
+  #~ sleep 1
+#~ end
 
   $Rmouse_BUTTON_L = 0x01        # left mouse button
   $Rmouse_BUTTON_R = 0x02        # right mouse button

@@ -10,4 +10,5 @@ class Object
   alias :克隆 :clone
   alias :复制 :dup
   alias :返回自己 :tap
+  alias :实例执行 :instance_eval
 end

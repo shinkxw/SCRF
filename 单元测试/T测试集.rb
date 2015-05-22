@@ -4,7 +4,7 @@ class T测试集
   attr_reader :描述, :成功次数
   def initialize(描述, 测试集代码)
     @描述, @测试数组, @成功次数, @初始化代码, @回收代码 = 描述, [], 0, nil, nil
-    self.instance_eval(&测试集代码)
+    self.实例执行(&测试集代码)
   end
   def 添加测试(测试描述, 测试次数 = 1, &测试代码);@测试数组 << T测试.新建(测试描述, 测试代码, 测试次数) end
   def 初始化(&初始化代码);@初始化代码 = 初始化代码 end
@@ -23,9 +23,9 @@ class T测试集
   def 执行(测试)
     测试.次数.times do
       测试对象 = Object.新建
-      测试对象.instance_eval(&@初始化代码) if @初始化代码
-      测试执行结果 = 测试对象.instance_eval(&测试.代码)
-      测试对象.instance_eval(&@回收代码) if @回收代码
+      测试对象.实例执行(&@初始化代码) if @初始化代码
+      测试执行结果 = 测试对象.实例执行(&测试.代码)
+      测试对象.实例执行(&@回收代码) if @回收代码
       return false if 测试执行结果 == false
     end
     return true

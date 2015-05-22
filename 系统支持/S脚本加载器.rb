@@ -1,6 +1,6 @@
 ﻿#!/usr/bin/env ruby -w
 # encoding: UTF-8
-class C脚本加载器
+module S脚本加载器
   def self.加载(加载路径)
     加载目录(加载路径)
     子目录名数组 = Dir.foreach(加载路径, encoding: 'UTF-8').select{|文件名| !文件名.include?('.')}
