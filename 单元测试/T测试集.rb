@@ -33,6 +33,6 @@ class T测试集
     输出 异常.信息
     return false
   end
-  def 测试数量;@测试数组.size end
+  def 测试数量;@测试数组.数量 end
   def 总结;" - - #{@描述} 测试结束, 耗时#{@耗时}秒, 结果: #{@成功次数} / #{测试数量}" end
 end

@@ -7,4 +7,5 @@ class String
   alias :符号 :to_sym
   alias :编码为 :encode
   alias :分割 :split
+  alias :去尾 :chop
 end

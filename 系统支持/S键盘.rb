@@ -1,6 +1,6 @@
 ﻿#!/usr/bin/env ruby -w
 # encoding: UTF-8
-require 'Win32API'
+需要 'Win32API'
 module S键盘
   @获取按键状态 = Win32API.新建("user32","GetAsyncKeyState",['I'],'I')
   def self.获取按键数组;@键名数组.找出{|名| 调用(名)}.收集{|名| 名.字符串[0..-2]} end

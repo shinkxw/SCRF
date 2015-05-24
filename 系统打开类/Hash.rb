@@ -3,6 +3,7 @@
 class Hash
   alias :每对 :each
   alias :大小 :size
+  alias :数量 :size
   alias :每个键 :each_key
   alias :每个值 :each_value 
   alias :清空 :clear
