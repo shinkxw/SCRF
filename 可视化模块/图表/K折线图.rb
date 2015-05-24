@@ -1,6 +1,6 @@
 ﻿#!/usr/bin/env ruby -w
 # encoding: UTF-8
-需要 'K图表'
+需要类 'K图表'
 class K折线图 < K图表
   def initialize(父界面 = nil, 宽 = 600, 高 = 400, p = 1.0/20)
     super(父界面, 宽, 高)

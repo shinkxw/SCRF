@@ -1,6 +1,6 @@
 ﻿#!/usr/bin/env ruby -w
 # encoding: UTF-8
-需要 'K可视化组件'
+需要类 'K可视化组件'
 class TK画布 < K可视化组件
   attr_reader :宽, :高, :背景色
   def initialize(父组件, 宽 = 600, 高 = 400, y轴逆转 = false)

@@ -1,7 +1,7 @@
 ﻿#!/usr/bin/env ruby -w
 # encoding: UTF-8
 class K可视化组件
-  include K可视化模块 
+  include K可视化模块
   def initialize(父组件)
     @组件池,@父组件 = [],父组件
     父组件.添加子组件(self) if 父组件
