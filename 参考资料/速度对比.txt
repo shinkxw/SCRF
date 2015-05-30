@@ -1,0 +1,45 @@
+﻿Block vs. Symbol#to_proc
+Symbol#to_pro比block快20倍，因为 Ruby 解释器内部做了优化。
+
+Enumerable#map and Array#flatten vs. Enumerable#flat_map
+map会返回一个列表的列表。如果想让一个列表map然后再flatten，
+可以使用可读性更好的flat_map代替map和flatten，俩工作方式相同，
+且flat_map快4.5倍，因为它只迭代一次，而不是两次。
+
+Enumerable#reverse and Enumerable#each vs. Enumerable#reverse_each
+reverse_each不会拷贝列表，只是反方向迭代。这使得它比另一种方法快 17%。
+
+Hash#keys and Enumerable#each vs. Hash#each_key
+Ruby 有个内置方法创建哈希键列表。更快的方法是不立即创建列表，而只是返回键的值，
+这让它快了33%。
+
+Array#shuffle and Array#first vs. Array#sample
+假设有个列表，想随机的提取一些值。一个方法是使用array.shuffle.first,
+打乱列表然后取列表的第一个元素，或者使用array.sample,它比前一个方法快 15 倍。
+
+Hash#merge vs. Hash#merge!
+不可变版本修改哈希对比可变版本创建一个哈希的拷贝，再进行合并和拷贝。
+因为在更小的空间内修改哈希，所以快了 3 倍。同样适用于Hash#[],快 2 倍速度。
+
+Hash#fetch vs. Hash#fetch with block
+fetch第二个参数是 block 要比直接传递 block 的结果快 2 倍。
+
+String#gsub vs. String#sub
+gsub将字符中所有的第一个字符替换成第二个字符。如果你只想进行一次替换，
+也不扫描多余的字符。使用sub快 50%。
+
+String#gsub vs. String#tr
+想进行全部替换时，总是可以使用tr替代gsub，使用tr快 5 倍。
+
+Parallel vs. sequential assignment
+并行赋值需要分配列表，且可读性不高。并行赋值在交换值的时候很有用，
+除此之外，使用顺序赋值，它可读性更好、快 40 %。
+
+Throw/catch
+与exceptions相比，使用throw/cath控制流跳转，它快 5 倍。
+
+catch :skip do
+  puts 'hello'
+  throw :skip # 離開 catch :skip 區塊
+  puts 'world' # 不會被執行到
+end
