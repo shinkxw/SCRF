@@ -2,8 +2,8 @@
 # encoding: UTF-8
 class Array
   alias :每个 :each
-  alias :大小 :size
-  alias :数量 :size
+  alias :大小 :count
+  alias :数量 :count
   alias :为空? :empty?
   alias :连接 :join
   alias :连接数组 :concat

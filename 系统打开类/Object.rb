@@ -3,7 +3,7 @@
 class Object
   def 字符串;to_s end
   def 类名;self.class.to_s end
-  def 获取单例类;class << self;return self;end end
+  def 获取单例类;class << self;self;end end
   def 定义单例方法(方法名, &块);获取单例类.send(:define_method, 方法名, &块) end
   alias :类 :class
   alias :调用 :__send__
