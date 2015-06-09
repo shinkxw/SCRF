@@ -6,11 +6,11 @@ module S性能分析器
 
     def initialize(klass, mid)
       super(klass, mid, nil)
-      self.hash = Struct.instance_method(:hash).bind(self).call
+      self.hash = klass.hash + mid.hash
     end
 
     def to_s
-      "#{defined_class.inspect}#".sub(/\A\#<Class:(.*)>#\z/, '\1.') << method_id.to_s
+      ("#{defined_class.inspect}#".sub(/\A\#<Class:(.*)>#\z/, '\1.') << method_id.to_s).中文化
     end
     alias inspect to_s
   end
