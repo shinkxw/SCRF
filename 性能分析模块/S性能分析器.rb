@@ -89,11 +89,11 @@ module_function
     f.printf "%8.2f %8.2f  %s\n", 0.0, total*1000, "#toplevel" # ???
   end
 end
-#~ RubyVM::InstructionSequence.compile_option = {
-  #~ :trace_instruction => true,
-  #~ :specialized_instruction => false
-#~ }
-#~ END {
-  #~ S性能分析器::print_profile(STDERR)
-#~ }
-#~ S性能分析器::start_profile
+RubyVM::InstructionSequence.compile_option = {
+  #:trace_instruction => true,
+  #:specialized_instruction => false
+}
+END {
+  S性能分析器::print_profile(STDERR)
+}
+S性能分析器::start_profile
