@@ -12,6 +12,7 @@ class Array
   alias :删除 :delete
   alias :排序 :sort
   alias :排序! :sort!
+  alias :排序根据 :sort_by
   alias :去重 :uniq
   alias :去重! :uniq!
   alias :收集 :collect

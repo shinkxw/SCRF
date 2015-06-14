@@ -21,11 +21,16 @@ load.on.activate=1
 #character.set=134
 
 LC_CTYPE=zh_CN.UTF-8
+#GBK
 #code.page=936
 #output.code.page=936
 
+#UTF-8
 code.page=65001
 output.code.page=65001
+
+#字体
+font.small=font:Courier New,size:8
 
 # 输出区的位置，大小，及启动scite文本编辑器时输出区是否隐藏
 # 输出区在下方
