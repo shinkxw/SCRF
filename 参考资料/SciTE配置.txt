@@ -1,0 +1,55 @@
+﻿if PLAT_WIN
+	position.left=350
+	position.top=160
+if PLAT_GTK
+	position.left=5
+	position.top=22
+position.width=900
+position.height=500
+
+line.margin.visible=1
+
+## 当前文件被外部修改时自动重新载入
+load.on.activate=1
+# scite失去焦点时自动保存文档。在某些时候这个选项很有用，比如切换到另外的程序去查看文档编辑效果。
+#save.on.deactivate=1
+# 当load.on.activate=1时，启用这个选项，重新载入时会先询问你
+#are.you.sure.on.reload=1
+# 重新载入文档时保留还原信息
+#reload.preserves.undo=1
+
+#character.set=134
+
+LC_CTYPE=zh_CN.UTF-8
+#code.page=936
+#output.code.page=936
+
+code.page=65001
+output.code.page=65001
+
+# 输出区的位置，大小，及启动scite文本编辑器时输出区是否隐藏
+# 输出区在下方
+split.vertical=0
+#output.horizontal.size=200
+#output.vertical.size=60
+#output.initial.hide=1
+# 执行命令前清空输出区的内容
+clear.before.execute=1
+## 一个tab占几个空格，一般设成4。 
+tabsize=4 
+tab.size.filepattern 
+use.tabs=0
+# 一个自动缩进占几个空格，一般为4 
+indent.size=2 
+indent.size.filepattern 
+#启用括号匹配检查
+braces.check=1
+braces.sloppy=1
+#在文件内出现过的词都可以自动完成
+autocompleteword.automatic=1
+# 左边带行号   
+line.margin.visible=1  
+line.margin.width=3+
+#保存打开的文件列表
+save.recent=1
+save.session=1

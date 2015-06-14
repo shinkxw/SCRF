@@ -7,7 +7,7 @@ module S性能分析器
       super(类, 方法名, nil)
       self.hash = 类.hash + 方法名.hash
     end
-    def to_s;("#{类.inspect}#".sub(/\A\#<Class:(.*)>#\z/, '\1.') << 方法名.to_s).中文化 end
+    def to_s;("#{类.inspect}#".sub(/\A\#<Class:(.*)>#\z/, '\1.') << 方法名.to_s) end
     alias inspect to_s
   end
 
@@ -17,15 +17,15 @@ module S性能分析器
   @@maps = nil # the map of call data keyed by thread, class and id. Call data contains the call count, total time,
   PROFILE_CALL_PROC = TracePoint.new(*%i[call c_call b_call]) {|tp|
     当前时间 = Process.times[0]
-    stack = (@@stacks[Thread.current] ||= [])
+    stack = (@@stacks[R线程.当前线程] ||= [])
     stack.push [当前时间, 0.0]
   }
   PROFILE_RETURN_PROC = TracePoint.new(*%i[return c_return b_return]) {|tp|
     当前时间 = Process.times[0]
     key = Wrapper.new(tp.defined_class, tp.method_id)
-    stack = (@@stacks[Thread.current] ||= [])
+    stack = (@@stacks[R线程.当前线程] ||= [])
     if tick = stack.pop
-      threadmap = (@@maps[Thread.current] ||= {})
+      threadmap = (@@maps[R线程.当前线程] ||= {})
       data = (threadmap[key] ||= [0, 0.0, 0.0, key])
       data[0] += 1
       cost = 当前时间 - tick[0]

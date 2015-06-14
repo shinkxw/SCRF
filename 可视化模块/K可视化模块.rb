@@ -7,5 +7,5 @@ module K可视化模块
   def self.待实例组件;@@未实例化组件.复制 end
   def self.全部实例化;待实例组件.每个(&:实例) end
   def self.运行;全部实例化;Tk.mainloop end
-  def self.后台运行;全部实例化;Thread.new {Tk.mainloop} end
+  def self.后台运行;全部实例化;R线程.new {Tk.mainloop} end
 end

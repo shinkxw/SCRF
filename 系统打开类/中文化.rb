@@ -1,0 +1,15 @@
+﻿#!/usr/bin/env ruby -w
+# encoding: UTF-8
+R对象 = Object
+R模块 = Module
+R类 = Class
+R内核 = Kernel
+R字符串 = String
+R数组 = Array
+R哈希 = Hash
+R数值 = Numeric
+R整数 = Integer
+R范围 = Range
+R枚举 = Enumerable
+R异常 = Exception
+R线程 = Thread

@@ -6,7 +6,7 @@ class C字符串匹配器
       if 文件后缀 == '.*' || 文件后缀.含有?(File.extname(路径))
         字符串数组 = open(路径,'r:UTF-8'){|文件| 文件.readlines}
         字符串数组.each_index do |index|
-          yield("#{路径}   第#{index + 1}行", 字符串数组[index])
+          yield("#{路径}:#{index + 1}:", 字符串数组[index])
         end
       end
     end

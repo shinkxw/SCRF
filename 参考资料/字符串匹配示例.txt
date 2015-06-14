@@ -1,0 +1,11 @@
+﻿#!/usr/bin/env ruby -w
+# encoding: UTF-8
+require_relative './SCRF/加载'
+
+忽略错误 do
+  C字符串匹配器.目录文件匹配('E:\RubyCode', %w(.rb)) do |信息, 字符串|
+    if 字符串 =~ /Object|Module|Class|Kernel|String|Array|Hash|Numeric|Integer|Range|Enumerable|Exception|Thread/
+      输出 "#{信息}    #{字符串.去尾}"
+    end
+  end
+end

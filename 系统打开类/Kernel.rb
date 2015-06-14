@@ -1,18 +1,8 @@
 ﻿#!/usr/bin/env ruby -w
 # encoding: UTF-8
 module Kernel
-  def 输出(对象);puts 中文化 对象 end
-  def 展示(对象);p 中文化 对象 end
-  def 中文化(对象)
-    case 对象.类名
-    when 'Array'; '[' + 对象.收集{|子对象| 中文化(子对象)}.连接(', ') + ']'
-    when 'Hash'; '{' + 对象.收集{|k,v| 中文化(k) + '=>' + 中文化(v)}.连接(', ') + '}'
-    when 'String'; 对象.编码为('GBK')
-    when 'Symbol'; 对象.字符串.编码为('GBK')
-    when 'NilClass'; 'nil'
-    else; 对象.字符串.编码为('GBK')
-    end
-  end
+  def 输出(对象);puts 对象.字符串 end
+  def 展示(对象);p 对象 end
   def 执行(代码, 最大长度 = 50)
     引发异常('eval异常',"代码长度超过#{最大长度}") if 代码.长度 > 最大长度
     eval 代码
