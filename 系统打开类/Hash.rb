@@ -13,4 +13,6 @@ class Hash
   alias :存在键? :has_key?
   alias :存在值? :has_value?
   alias :合并 :merge
+  alias :所有键 :keys
+  alias :所有值 :values  
 end

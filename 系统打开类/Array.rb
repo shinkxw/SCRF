@@ -16,4 +16,7 @@ class Array
   alias :去重! :uniq!
   alias :收集 :collect
   alias :替换 :collect!
+  alias :入栈 :push
+  alias :出栈 :pop
+  alias :末尾 :last
 end

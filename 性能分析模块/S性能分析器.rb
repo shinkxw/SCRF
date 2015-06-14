@@ -1,66 +1,52 @@
 ﻿#!/usr/bin/env ruby -w
 # encoding: UTF-8
 module S性能分析器
-  class Wrapper < Struct.new(:类, :方法名, :hash)
-    private :类=, :方法名=, :hash=
-    def initialize(类, 方法名)
-      super(类, 方法名, nil)
-      self.hash = 类.hash + 方法名.hash
-    end
-    def to_s;("#{类.inspect}#".sub(/\A\#<Class:(.*)>#\z/, '\1.') << 方法名.to_s) end
-    alias inspect to_s
-  end
-
-  # internal values
-  @@开始时间 = nil
-  @@stacks = nil # the map of stacks keyed by thread
-  @@maps = nil # the map of call data keyed by thread, class and id. Call data contains the call count, total time,
-  PROFILE_CALL_PROC = TracePoint.new(*%i[call c_call b_call]) {|tp|
-    当前时间 = Process.times[0]
-    stack = (@@stacks[R线程.当前线程] ||= [])
-    stack.push [当前时间, 0.0]
+  @开始时间 = nil
+  @线程_时间栈_哈希 = nil
+  @线程_线程哈希_哈希 = nil
+  @开始处理 = R断点.new(*%i[call c_call b_call]) {|信息|
+    时间栈 = (@线程_时间栈_哈希[R线程.当前线程] ||= [])
+    时间栈.入栈 [R进程.时间[0], 0.0]
   }
-  PROFILE_RETURN_PROC = TracePoint.new(*%i[return c_return b_return]) {|tp|
-    当前时间 = Process.times[0]
-    key = Wrapper.new(tp.defined_class, tp.method_id)
-    stack = (@@stacks[R线程.当前线程] ||= [])
-    if tick = stack.pop
-      threadmap = (@@maps[R线程.当前线程] ||= {})
-      data = (threadmap[key] ||= [0, 0.0, 0.0, key])
-      data[0] += 1
-      cost = 当前时间 - tick[0]
-      data[1] += cost
-      data[2] += cost - tick[1]
-      stack[-1][1] += cost if stack[-1]
+  @结束处理 = R断点.new(*%i[return c_return b_return]) {|信息|
+    时间栈 = (@线程_时间栈_哈希[R线程.当前线程] ||= [])
+    if 时间 = 时间栈.出栈
+      线程哈希 = (@线程_线程哈希_哈希[R线程.当前线程] ||= {})
+      数据 = (线程哈希[信息.调用对象.hash + 信息.方法名称.hash] ||= [0, 0.0, 0.0, ("#{信息.调用对象.inspect}#".sub(/\A\#<Class:(.*)>#\z/, '\1.') << 信息.方法名称.to_s)])
+      数据[0] += 1
+      消耗时间 = R进程.时间[0] - 时间[0]
+      数据[1] += 消耗时间
+      数据[2] += 消耗时间 - 时间[1]
+      时间栈.末尾[1] += 消耗时间 if 时间栈.末尾
     end
   }
 module_function
   def 开始分析
-    @@开始时间 = Process.times[0]
-    @@stacks = {}
-    @@maps = {}
-    PROFILE_CALL_PROC.enable
-    PROFILE_RETURN_PROC.enable
+    @开始时间 = R进程.时间[0]
+    @线程_时间栈_哈希 = {}
+    @线程_线程哈希_哈希 = {}
+    @开始处理.启用
+    @结束处理.启用
   end
   def 停止分析
-    PROFILE_CALL_PROC.disable
-    PROFILE_RETURN_PROC.disable
+    @开始处理.禁用
+    @结束处理.禁用
   end
   def 输出分析结果(f = STDERR)
     停止分析
-    总耗时 = Process.times[0] - @@开始时间
+    总耗时 = R进程.时间[0] - @开始时间
     总耗时 = 0.01 if 总耗时 == 0
-    totals = {}
-    @@maps.values.each do |threadmap|
-      threadmap.each do |key, data|
-        total_data = (totals[key] ||= [0, 0.0, 0.0, key])
+    数据总计 = {}
+    @线程_线程哈希_哈希.所有值.每个 do |线程哈希|
+      线程哈希.每对 do |key, data|
+        total_data = (数据总计[key] ||= [0, 0.0, 0.0, data[3]])
         total_data[0] += data[0]
         total_data[1] += data[1]
         total_data[2] += data[2]
       end
     end
 
-    data = totals.values
+    data = 数据总计.values
     data = data.sort_by{|x| -x[2]}
     sum = 0
     f.printf "   %%   cumulative   self                   self      total\n"
