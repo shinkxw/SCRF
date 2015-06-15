@@ -1,11 +1,12 @@
 ﻿#!/usr/bin/env ruby -w
 # encoding: UTF-8
 module Enumerable
+  def 字符串;'[' << collect{|子对象| 子对象.字符串}.join(', ') << ']' end
   alias :全部? :all?
   alias :有些? :any?
   alias :含有? :include?
   alias :包含? :include?
-  alias :数量? :count
+  alias :数量 :count
   alias :寻找 :find
   alias :找出全部 :select
   alias :收集 :collect

@@ -8,6 +8,7 @@ class Object
   alias :调用 :__send__
   alias :方法 :methods
   alias :属于? :kind_of?
+  alias :响应? :respond_to?
   alias :克隆 :clone
   alias :复制 :dup
   alias :返回自己 :tap

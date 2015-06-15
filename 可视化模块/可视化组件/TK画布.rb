@@ -13,6 +13,7 @@ end
 
 class K画布组件 < K可视化组件
   def 点转换(点);@父组件.点转换(点) end
+  def 移动(向量);父实例.move(实例.id,向量.x,(@y轴逆转 ? 向量.y : -向量.y)) end
 end
 
 class TKC线段 < K画布组件
