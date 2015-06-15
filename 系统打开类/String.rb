@@ -11,6 +11,5 @@ class String
   alias :分割 :split
   alias :去尾 :chop
   alias :替换 :gsub
-  #alias :字符串 :to_s
-  def 字符串;'\'' << to_s << '\'' end
+  alias :字符串 :to_s
 end
