@@ -25,5 +25,6 @@ module Kernel
   alias :随机 :rand
   alias :调用信息 :caller
   alias :暂停 :sleep
+  alias :格式化 :format
   #~ def 存在类?(类名);eval("defined?(#{类名}) && #{类名}.is_a?(Class)") == true end
 end
