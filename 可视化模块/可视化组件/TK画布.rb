@@ -9,6 +9,10 @@ class TK画布 < K可视化组件
   def 实例指令;"TkCanvas.new(父实例){width #{@宽};height #{@高}}.pack" end
   def 背景色=(背景色);实例.bg(背景色) end
   def 点转换(点);(@y轴逆转 ? 点.类.新建(点.x, @高 - 点.y) : 点) end
+  def 滚动(向量, 滚动单位 = 'units')#page
+    实例.xview_scroll(向量.x, 滚动单位) if 向量.x != 0
+    实例.yview_scroll(向量.y, 滚动单位) if 向量.y != 0
+  end
 end
 
 class K画布组件 < K可视化组件

@@ -9,6 +9,7 @@ class D二维向量
   end
   def 零向量?;@x == 0 && @y == 0 end
   def *(数值);类.新建(@x * 数值,@y * 数值) end
+  def /(数值);类.新建(@x / 数值,@y / 数值) end
   def +(向量);类.新建(@x + 向量.x, @y + 向量.y) end
   def -(向量);类.新建(@x - 向量.x, @y - 向量.y) end
   def 四舍五入;@x = @x.round;@y = @y.round;self end
