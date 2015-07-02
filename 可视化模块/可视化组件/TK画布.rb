@@ -3,8 +3,8 @@
 需要类 'K可视化组件'
 class TK画布 < K可视化组件
   attr_reader :宽, :高, :背景色
-  def initialize(父组件, 宽 = 600, 高 = 400, y轴逆转 = false)
-    super(父组件); @宽, @高, @背景色, @y轴逆转 = 宽, 高, 背景色, y轴逆转
+  def initialize(父组件, 宽, 高, y轴逆转 = false)
+    super(父组件); @宽, @高, @y轴逆转 = 宽, 高, y轴逆转
   end
   def 实例指令;"TkCanvas.new(父实例){width #{@宽};height #{@高}}.pack" end
   def 背景色=(背景色);实例.bg(背景色) end
@@ -14,8 +14,10 @@ class TK画布 < K可视化组件
     实例.xview_scroll(向量.x, 卷动单位) if 向量.x != 0
     实例.yview_scroll(y轴转换(向量.y), 卷动单位) if 向量.y != 0
   end
-  def 设置x轴卷动单位长度(单位长度);实例.xscrollincrement(单位长度) end
-  def 设置y轴卷动单位长度(单位长度);实例.yscrollincrement(单位长度) end
+  def 设置卷动单位长度(x轴长度, y轴长度)
+    实例.xscrollincrement(x轴长度)
+    实例.yscrollincrement(y轴长度)
+  end
 end
 
 class K画布组件 < K可视化组件
