@@ -6,7 +6,7 @@ class TK画布 < K可视化组件
   def initialize(父组件, 宽, 高, y轴逆转 = false)
     super(父组件); @宽, @高, @y轴逆转 = 宽, 高, y轴逆转
   end
-  def 实例指令;"TkCanvas.new(父实例){width #{@宽};height #{@高}}.pack" end
+  def 实例指令;"TkCanvas.新建(父实例){width #{@宽};height #{@高}}.pack" end
   def 背景色=(背景色);实例.bg(背景色) end
   def 点转换(点);(@y轴逆转 ? 点.类.新建(点.x, @高 - 点.y) : 点) end
   def y轴转换(向量长);(@y轴逆转 ? -向量长 : 向量长) end
@@ -30,7 +30,7 @@ class TKC线段 < K画布组件
   def initialize(画布, 起点, 终点);super(画布); @起点, @终点 = 起点, 终点 end
   def 实例指令
     起点, 终点 = 点转换(@起点), 点转换(@终点)
-    "TkcLine.new(父实例, #{起点.x}, #{起点.y}, #{终点.x}, #{终点.y})"
+    "TkcLine.新建(父实例, #{起点.x}, #{起点.y}, #{终点.x}, #{终点.y})"
   end
   def 箭头(参数 = 'last');返回自己{实例.arrow(参数)} end#first,last,both
 end
@@ -40,7 +40,7 @@ class TKC矩形 < K画布组件
   def initialize(画布, 起点, 终点);super(画布); @起点, @终点 = 起点, 终点 end
   def 实例指令
     起点, 终点 = 点转换(@起点), 点转换(@终点)
-    "TkcRectangle.new(父实例, #{起点.x}, #{起点.y}, #{终点.x}, #{终点.y})"
+    "TkcRectangle.新建(父实例, #{起点.x}, #{起点.y}, #{终点.x}, #{终点.y})"
   end
 end
 
@@ -49,7 +49,7 @@ class TKC椭圆 < K画布组件
   def initialize(画布, 左点, 右点);super(画布); @左点, @右点 = 左点, 右点 end
   def 实例指令
     左点, 右点 = 点转换(@左点), 点转换(@右点)
-    "TkcOval.new(父实例, #{左点.x}, #{左点.y}, #{右点.x}, #{右点.y})"
+    "TkcOval.新建(父实例, #{左点.x}, #{左点.y}, #{右点.x}, #{右点.y})"
   end
   def 改变位置(左点, 右点)
     @左点, @右点 = 左点, 右点
@@ -63,7 +63,7 @@ class TKC文本 < K画布组件
   def initialize(画布, 起点);super(画布); @起点 = 起点 end
   def 实例指令
     起点 = 点转换(@起点)
-    "TkcText.new(父实例, #{起点.x}, #{起点.y})"
+    "TkcText.新建(父实例, #{起点.x}, #{起点.y})"
   end
   def 文本=(文本);实例.text(文本) end
 end

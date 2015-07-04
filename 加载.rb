@@ -1,6 +1,7 @@
 ﻿#!/usr/bin/env ruby -w
 # encoding: UTF-8
 根路径 = File.dirname(__FILE__)
+$:.unshift("#{根路径}/附加库中文化")
 require "#{根路径}/系统支持/S脚本加载器"
 
 S脚本加载器.加载("#{根路径}/系统打开类")
