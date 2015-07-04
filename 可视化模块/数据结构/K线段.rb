@@ -1,7 +1,7 @@
 ﻿#!/usr/bin/env ruby -w
 # encoding: UTF-8
 class K线段
-  attr_reader :起点, :终点
+  可读属性 :起点, :终点
   def initialize(起点, 终点, 画布 = nil);@起点, @终点, @画布 = 起点, 终点, 画布 end
   def 缩短为(新长度)
     比例 = 新长度 / 长度

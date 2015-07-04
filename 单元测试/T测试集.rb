@@ -1,7 +1,7 @@
 ﻿#!/usr/bin/env ruby -w
 # encoding: UTF-8
 class T测试集
-  attr_reader :描述, :成功次数
+  可读属性 :描述, :成功次数
   def initialize(描述, 测试集代码)
     @描述, @测试数组, @成功次数, @初始化代码, @回收代码 = 描述, [], 0, nil, nil
     self.实例执行(&测试集代码)

@@ -1,7 +1,7 @@
 ﻿#!/usr/bin/env ruby -w
 # encoding: UTF-8
 class D二维点
-  attr_reader :x, :y
+  可读属性 :x, :y
   def initialize(x, y);@x,@y = x,y end
   def +(点);类.新建(@x + 点.x, @y + 点.y) end
   def -(点);D二维向量.新建(@x - 点.x, @y - 点.y) end

@@ -1,7 +1,7 @@
 ﻿#!/usr/bin/env ruby -w
 # encoding: UTF-8
 class C帧数计算器
-  attr_reader :计算周期, :帧数
+  可读属性 :计算周期, :帧数
   def initialize(计算周期 = 30, &帧数回调)
     @计算周期, @调用次数, @帧数, @上次计算时间, @帧数回调 = 计算周期, 0, 0, Time.now, 帧数回调
   end

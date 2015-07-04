@@ -1,7 +1,7 @@
 ﻿#!/usr/bin/env ruby -w
 # encoding: UTF-8
 class K图表
-  attr_reader :宽, :高, :画布
+  可读属性 :宽, :高, :画布
   def initialize(父界面 = nil, 宽 = 600, 高 = 400)
     父界面 = TK主界面.新建("图表", 宽, 高) unless 父界面
     @宽, @高, @画布 = 宽, 高, TK画布.新建(父界面, 宽, 高, true)

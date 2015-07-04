@@ -2,14 +2,14 @@
 # encoding: UTF-8
 module S性能分析器
   class C时间结构
-    attr_accessor :起始时间, :共消耗时间
+    可读写属性 :起始时间, :共消耗时间
     def initialize
       @起始时间 = R进程.时间[0]
       @共消耗时间 = 0.0
     end
   end
   class C统计结构
-    attr_accessor :调用次数, :共消耗时间, :自己消耗时间, :调用名称
+    可读写属性 :调用次数, :共消耗时间, :自己消耗时间, :调用名称
     def initialize(调用名称)
       @调用次数 = 0
       @共消耗时间 = 0.0
@@ -36,19 +36,18 @@ module S性能分析器
       时间栈.末尾.共消耗时间 += 消耗时间 if 时间栈.末尾
     end
   }
-module_function
-  def 开始分析
+  def self.开始分析
     @开始时间 = R进程.时间[0]
     @线程_时间栈_哈希 = {}
     @线程_线程哈希_哈希 = {}
     @开始处理.启用
     @结束处理.启用
   end
-  def 停止分析
+  def self.停止分析
     @开始处理.禁用
     @结束处理.禁用
   end
-  def 输出分析结果(输出对象 = STDERR)
+  def self.输出分析结果(输出对象 = STDERR)
     停止分析
     总耗时 = R进程.时间[0] - @开始时间
     总耗时 = 0.01 if 总耗时 == 0

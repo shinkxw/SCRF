@@ -2,7 +2,7 @@
 # encoding: UTF-8
 需要类 'K可视化组件'
 class TK画布 < K可视化组件
-  attr_reader :宽, :高, :背景色
+  可读属性 :宽, :高, :背景色
   def initialize(父组件, 宽, 高, y轴逆转 = false)
     super(父组件); @宽, @高, @y轴逆转 = 宽, 高, y轴逆转
   end
@@ -26,7 +26,7 @@ class K画布组件 < K可视化组件
 end
 
 class TKC线段 < K画布组件
-  attr_reader :起点, :终点
+  可读属性 :起点, :终点
   def initialize(画布, 起点, 终点);super(画布); @起点, @终点 = 起点, 终点 end
   def 实例指令
     起点, 终点 = 点转换(@起点), 点转换(@终点)
@@ -36,7 +36,7 @@ class TKC线段 < K画布组件
 end
 
 class TKC矩形 < K画布组件
-  attr_reader :起点, :终点
+  可读属性 :起点, :终点
   def initialize(画布, 起点, 终点);super(画布); @起点, @终点 = 起点, 终点 end
   def 实例指令
     起点, 终点 = 点转换(@起点), 点转换(@终点)
@@ -45,7 +45,7 @@ class TKC矩形 < K画布组件
 end
 
 class TKC椭圆 < K画布组件
-  attr_reader :左点, :右点#边界矩形左上角和底部右下角
+  可读属性 :左点, :右点#边界矩形左上角和底部右下角
   def initialize(画布, 左点, 右点);super(画布); @左点, @右点 = 左点, 右点 end
   def 实例指令
     左点, 右点 = 点转换(@左点), 点转换(@右点)
@@ -59,7 +59,7 @@ class TKC椭圆 < K画布组件
 end
 
 class TKC文本 < K画布组件
-  attr_reader :起点
+  可读属性 :起点
   def initialize(画布, 起点);super(画布); @起点 = 起点 end
   def 实例指令
     起点 = 点转换(@起点)
