@@ -1,0 +1,10 @@
+﻿#!/usr/bin/env ruby -w
+# encoding: UTF-8
+Tk内核 = TkKernel
+Tk对象 = TkObject
+Tk主界面 = TkRoot
+Tk画布 = TkCanvas
+Tkc文本 = TkcText
+Tkc线段 = TkcLine
+Tkc矩形 = TkcRectangle
+Tkc椭圆 = TkcOval
