@@ -5,8 +5,10 @@ class Object
   def 格式转换(格式);format(格式, self) end
   def 类名;self.class.to_s end
   def 定义单例方法(方法名, &块);单例类.send(:define_method, 方法名, &块) end
+  def 定义实例方法(方法名, &块);类.send(:define_method, 方法名, &块) end
   alias :类 :class
-  alias :调用 :__send__
+  alias :调用 :public_send
+  alias :强制调用 :__send__
   alias :方法 :methods
   alias :属于? :kind_of?
   alias :响应? :respond_to?
