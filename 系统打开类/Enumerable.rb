@@ -7,8 +7,8 @@ module Enumerable
   alias :含有? :include?
   alias :包含? :include?
   alias :数量 :count
-  alias :寻找 :find
-  alias :找出全部 :select
+  alias :找出 :find
+  alias :找出全部 :find_all
   alias :收集 :collect
   alias :检索 :grep
   alias :注入 :inject
