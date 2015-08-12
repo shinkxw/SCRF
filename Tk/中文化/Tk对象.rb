@@ -1,6 +1,5 @@
 ﻿#!/usr/bin/env ruby -w
 # encoding: UTF-8
-需要模块 'Tk'
 class TkObject
   def self.定义映射方法(方法映射)
     方法映射.每对 do |原方法名, 现方法名|

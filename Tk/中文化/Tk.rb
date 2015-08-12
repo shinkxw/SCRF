@@ -1,6 +1,5 @@
 ﻿#!/usr/bin/env ruby -w
 # encoding: UTF-8
-需要 'tk'
 module Tk
   class << self
     alias :运行 :mainloop
