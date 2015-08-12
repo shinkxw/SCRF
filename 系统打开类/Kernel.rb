@@ -21,6 +21,7 @@ module Kernel
   def 加载目录(目录路径);S脚本加载器.加载(目录路径) end
   alias :需要 :require
   alias :需要类 :require_relative
+  alias :需要模块 :require_relative
   alias :引发 :raise
   alias :随机 :rand
   alias :调用信息 :caller
