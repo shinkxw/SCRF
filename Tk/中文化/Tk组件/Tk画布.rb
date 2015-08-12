@@ -2,7 +2,7 @@
 # encoding: UTF-8
 class Tk画布
   def self.创建(父组件, 宽, 高)
-    新建(父组件){宽度 = 宽;高度 = 高}.pack
+    新建(父组件){宽度 = 宽;高度 = 高}
   end
   def 卷动(向量, 卷动单位 = 'units')#page
     x轴卷动(向量.x, 卷动单位) if 向量.x != 0
