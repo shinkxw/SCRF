@@ -3,6 +3,7 @@
 Tk内核 = TkKernel
 Tk对象 = TkObject
 Tk主界面 = TkRoot
+Tk窗口 = TkWindow
 Tk标签 = TkLabel
 Tk画布 = TkCanvas
 Tkc文本 = TkcText

@@ -1,0 +1,11 @@
+﻿给定相对主窗口位置布局的管理器
+
+配置项
+x x坐标
+y y坐标
+width 宽度
+height 高度
+relx(0..1) 相对x位置
+rely(0..1) 相对y位置
+relwidth(0..1) 相对宽度
+relheight(0..1) 相对高度
