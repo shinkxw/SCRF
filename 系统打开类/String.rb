@@ -6,6 +6,7 @@ class String
   def 填充(长度, 填充符 = ' ');中文长度 < 长度 ? self + (填充符 * (长度 - 中文长度)) : self end
   alias :长度 :length
   alias :编码 :encoding
+  alias :包含? :include?
   alias :符号化 :to_sym
   alias :编码为 :encode
   alias :分割 :split
