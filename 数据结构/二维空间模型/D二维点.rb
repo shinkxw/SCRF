@@ -2,7 +2,7 @@
 # encoding: UTF-8
 class D二维点
   可读属性 :x, :y
-  def initialize(x, y);@x,@y = x,y end
+  def 初始化(x, y);@x,@y = x,y end
   def +(点);类.新建(@x + 点.x, @y + 点.y) end
   def -(点);D二维向量.新建(@x - 点.x, @y - 点.y) end
   def 中点(点);类.新建((@x + 点.x) / 2, (@y + 点.y) / 2) end

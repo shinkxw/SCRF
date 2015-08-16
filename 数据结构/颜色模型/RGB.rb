@@ -3,7 +3,7 @@
 module SCRF
   class RGB
     可读属性 :红, :绿, :蓝
-    def initialize(*参数)
+    def 初始化(*参数)
       @红, @绿, @蓝 = 参数.数量 == 1 ? 分解hex(参数[0]) : 参数
       数值验证
     end
