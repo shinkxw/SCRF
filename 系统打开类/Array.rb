@@ -2,6 +2,7 @@
 # encoding: UTF-8
 class Array
   def 字符串;'[' << collect{|子对象| 子对象.字符串}.join(', ') << ']' end
+  alias :初始化 :initialize
   alias :每个 :each
   alias :为空? :empty?
   alias :连接 :join
