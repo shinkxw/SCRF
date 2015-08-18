@@ -17,4 +17,5 @@ R枚举 = Enumerable
 R异常 = Exception
 R线程 = Thread
 R时间 = Time
+R数学 = Math
 R断点 = TracePoint

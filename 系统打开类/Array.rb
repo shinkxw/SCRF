@@ -14,10 +14,13 @@ class Array
   alias :排序根据! :sort_by!
   alias :去重 :uniq
   alias :去重! :uniq!
-  alias :替换 :collect!
+  alias :替换! :collect!
   alias :入栈 :push
   alias :出栈 :pop
+  alias :插入 :unshift
+  alias :去首 :shift
   alias :末尾 :last
+  alias :乘积 :product
   #Enumerable同名
   alias :全部? :all?
   alias :有些? :any?
