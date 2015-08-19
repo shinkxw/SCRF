@@ -7,4 +7,5 @@ class Range
   alias :终点 :last
   alias :数组化 :to_a
   alias :字符串 :to_s
+  alias :每个 :each
 end

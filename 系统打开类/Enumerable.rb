@@ -22,5 +22,4 @@ module Enumerable
   alias :分组根据 :group_by
   alias :打包 :zip
   alias :循环 :cycle
-  def 每个(&块); each(&块) end
 end
