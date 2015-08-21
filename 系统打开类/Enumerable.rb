@@ -22,4 +22,5 @@ module Enumerable
   alias :分组根据 :group_by
   alias :打包 :zip
   alias :循环 :cycle
+  alias :收集并重整 :flat_map
 end

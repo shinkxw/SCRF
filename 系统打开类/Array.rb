@@ -20,6 +20,7 @@ class Array
   alias :插入 :unshift
   alias :去首 :shift
   alias :末尾 :last
+  alias :取样 :sample
   alias :乘积 :product
   #Enumerable同名
   alias :全部? :all?
