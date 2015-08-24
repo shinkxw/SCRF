@@ -24,4 +24,5 @@ module Enumerable
   alias :打包 :zip
   alias :循环 :cycle
   alias :收集并重整 :flat_map
+  alias :前 :first
 end
