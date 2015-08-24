@@ -12,8 +12,8 @@ class Hash
   alias :默认值 :default
   alias :删除 :delete
   alias :为空? :empty?
-  alias :存在键? :has_key?
-  alias :存在值? :has_value?
+  alias :含有键? :has_key?
+  alias :含有值? :has_value?
   alias :合并 :merge
   alias :合并! :merge!
   alias :所有键 :keys
