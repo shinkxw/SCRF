@@ -1,5 +1,6 @@
 ﻿#!/usr/bin/env ruby -w
 # encoding: UTF-8
+R基本对象 = BasicObject
 R对象 = Object
 R模块 = Module
 R类 = Class

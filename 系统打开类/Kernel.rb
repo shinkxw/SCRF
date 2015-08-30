@@ -28,5 +28,8 @@ module Kernel
   alias :循环 :loop
   alias :暂停 :sleep
   alias :格式化 :format
+  alias :作用域 :binding
+  alias :上下文 :binding
+  alias :提供了块? :block_given?
   #~ def 存在类?(类名);eval("defined?(#{类名}) && #{类名}.is_a?(Class)") == true end
 end
