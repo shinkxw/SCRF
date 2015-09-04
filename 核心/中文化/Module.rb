@@ -15,5 +15,4 @@ class Module
   alias :带参执行 :module_exec
   alias :字符串 :to_s
   alias :重命名方法 :alias_method
-  alias :_old_method_added_ :method_added
 end
