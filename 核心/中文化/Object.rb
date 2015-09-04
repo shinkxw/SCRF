@@ -10,7 +10,7 @@ class Object
   alias :响应? :respond_to?
   alias :克隆 :clone
   alias :复制 :dup
-  alias :返回自己 :tap
+  alias :自己 :tap
   alias :扩展 :extend
   alias :实例执行 :instance_eval
   alias :实例带参执行 :instance_exec

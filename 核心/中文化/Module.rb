@@ -1,6 +1,7 @@
 ﻿#!/usr/bin/env ruby -w
 # encoding: UTF-8
 class Module
+  alias :名称 :name
   alias :可读属性 :attr_reader
   alias :可读写属性 :attr_accessor
   alias :定义方法 :define_method

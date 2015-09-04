@@ -2,9 +2,12 @@
 # encoding: UTF-8
 class String
   alias :长度 :length
+  alias :大小 :size
   alias :编码 :encoding
   alias :包含? :include?
   alias :编码为 :encode
+  alias :识别为 :force_encoding
+  alias :扫描 :scan
   alias :分割 :split
   alias :大写 :upcase
   alias :大写! :upcase!
@@ -17,5 +20,5 @@ class String
   alias :替换 :gsub
   alias :整数化 :to_i
   alias :符号化 :to_sym
-  alias :字符串 :to_s
+  alias :字符串化 :to_s
 end

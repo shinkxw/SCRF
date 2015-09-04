@@ -3,6 +3,8 @@
 class Array
   alias :初始化 :initialize
   alias :每个 :each
+  alias :长度 :length
+  alias :大小 :size
   alias :为空? :empty?
   alias :前 :first
   alias :后 :last
