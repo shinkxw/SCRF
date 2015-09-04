@@ -7,9 +7,9 @@ module S模块加载器
     加载模块(模块名称) if (立即加载)
   end
   def self.加载模块(输入)
-    if 输入.类名 == 'String'
+    if 输入.属于?(R字符串)
       加载单个模块(输入)
-    elsif 输入.类名 == 'Array'
+    elsif 输入.属于?(R数组)
       输入.每个{|模块名称| 加载单个模块(模块名称)}
     end
   end
