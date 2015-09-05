@@ -1,7 +1,6 @@
 ﻿#!/usr/bin/env ruby -w
 # encoding: UTF-8
 class Range
-  alias :取样 :随机
   alias :起点 :begin
   alias :终点 :end
   alias :前 :first
