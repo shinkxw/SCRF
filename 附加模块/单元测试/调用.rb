@@ -10,3 +10,7 @@ module Kernel
     测试集.总结
   end
 end
+
+END {
+  T测试框架.执行所有测试集
+}
