@@ -7,6 +7,8 @@ class TkObject
       定义方法(现方法名 + '=') {|值| 调用(原方法名, 值)}
     end
   end
+  def 配置(项目, 值 = None);configure(项目, 值) end
+  def 配置信息(项目 = nil);configinfo(项目) end
   alias :tk方法缺失 :method_missing
   def 方法缺失(方法名, *参数)
     return 调用($1, *参数) if 方法名.字符串化 =~ /^([\u4e00-\u9fa5]+)=$/

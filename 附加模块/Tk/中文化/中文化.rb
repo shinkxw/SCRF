@@ -6,6 +6,7 @@ Tk主界面 = TkRoot
 Tk窗口 = TkWindow
 Tk标签 = TkLabel
 Tk画布 = TkCanvas
+Tkc组件 = TkcItem
 Tkc文本 = TkcText
 Tkc线段 = TkcLine
 Tkc矩形 = TkcRectangle
