@@ -1,11 +1,8 @@
 ﻿#!/usr/bin/env ruby -w
 # encoding: UTF-8
-class Tkc椭圆
+class Tkc弧形
   def self.创建(画布, 左上点, 右下点)
     新建(画布, 左上点.x, 左上点.y, 右下点.x, 右下点.y)
-  end
-  def 改变位置(画布, 左点, 右点)
-    画布.改变组件位置(self, 左点.x, 左点.y, 右点.x, 右点.y)
   end
   定义映射方法(fill: '填充色', offset: '偏移量', stipple: '点画', width: '宽度')
   定义映射方法(activefill: '活动时填充色', disabledfill: '禁用时填充色')
@@ -20,7 +17,10 @@ end
 #~ ["disableddash", "", ""]
 #~ ["disabledoutline", "", ""]
 #~ ["disabledoutlinestipple", "", ""]
-#~ ["disabledwidth", 0.0, 0]
+#~ ["disabledwidth", 0.0, 0.0]
+#~ ["extent", 90, 90.0]
 #~ ["outline", "black", "black"]
 #~ ["outlineoffset", "0,0", "0,0"]
 #~ ["outlinestipple", "", ""]
+#~ ["start", 0, 0.0]
+#~ ["style", "", "pieslice"]
