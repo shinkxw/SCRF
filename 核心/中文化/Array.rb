@@ -13,6 +13,9 @@ class Array
   alias :重整 :flatten
   alias :重整! :flatten!
   alias :删除 :delete
+  alias :索引删除 :delete_at
+  alias :条件删除 :delete_if
+  alias :索引取值 :values_at
   alias :排序! :sort!
   alias :排序根据! :sort_by!
   alias :去重 :uniq
