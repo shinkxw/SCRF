@@ -23,4 +23,5 @@ module Enumerable
   alias :循环 :cycle
   alias :收集并重整 :flat_map
   alias :前 :first
+  alias :每片 :each_slice
 end
