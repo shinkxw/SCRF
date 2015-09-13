@@ -15,6 +15,8 @@ module Enumerable
   alias :最大值根据 :max_by
   alias :最小值 :min
   alias :最小值根据 :min_by
+  alias :最小值最大值 :minmax
+  alias :最小值最大值根据 :minmax_by
   alias :划分 :partition
   alias :排序 :sort
   alias :排序根据 :sort_by
