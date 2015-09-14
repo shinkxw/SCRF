@@ -27,6 +27,7 @@ class Array
   alias :去首 :shift
   alias :末尾 :last
   alias :取样 :sample
+  alias :转置 :transpose
   alias :乘积 :product
   #Enumerable同名
   alias :全部? :all?
