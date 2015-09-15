@@ -16,11 +16,11 @@ class Tk画布
   alias :移动组件 :move#tag,dx,dy
   alias :移动组件至 :move_to#tag,dx,dy
   alias :改变组件位置 :coords#组件,参数
-  alias :提升 :raise
-  alias :降低 :lower
+  alias :提升 :raise#显示优先级
+  alias :降低 :lower#显示优先级
   alias :查找 :find
-  alias :画布x :canvasx
-  alias :画布y :canvasy
+  alias :画布x :canvasx#画布相对点换算为绝对点
+  alias :画布y :canvasy#画布相对点换算为绝对点
   alias :x轴卷动 :xview_scroll
   alias :y轴卷动 :yview_scroll
   alias :包围盒 :bbox#所有项目 all
