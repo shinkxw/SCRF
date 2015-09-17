@@ -10,6 +10,7 @@ class D二维向量
   def 反转;类.新建(-@x, -@y) end
   def x反转;类.新建(-@x, @y) end
   def y反转;类.新建(@x, -@y) end
+  def 整数化;类.新建(@x.整数化, @y.整数化) end
   def 零向量?;@x == 0 && @y == 0 end
   def *(数值);类.新建(@x * 数值, @y * 数值) end
   def /(数值);类.新建(@x / 数值, @y / 数值) end
