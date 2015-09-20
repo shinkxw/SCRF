@@ -43,10 +43,12 @@ module SCRF
     def 字符串;"<RGB: #{@红}, #{@绿}, #{@蓝}>" end
     alias :to_s :字符串
   end
+  
   定义测试集 'RGB测试' do
     添加测试 'Hex转换测试' do
       RGB.新建('#47A26F').转换为hex.应该为 '#47A26F'
     end
+    
     添加测试 'HSV转换测试' do
       RGB.新建(71,102,99).转换为HSV.字符串.应该为 '<HSV: 174, 0.3, 102>'
     end
