@@ -12,7 +12,7 @@ module Kernel
   def 耗时;时间 = R时间.现在;yield;R时间.现在 - 时间 end
   def 忽略错误(是否显示错误信息 = true)
     yield
-  rescue Exception => 异常
+  rescue R异常 => 异常
     异常.输出类名.输出信息.输出堆栈 if 是否显示错误信息
     异常.输出转换历史 if (是否显示错误信息 && 异常.属于?(E异常))
   end
