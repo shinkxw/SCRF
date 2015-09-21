@@ -22,11 +22,15 @@ class T测试集
   end
   def 执行(测试)
     测试.次数.次 do
-      测试对象 = R对象.新建
-      测试对象.实例执行(&@初始化代码) if @初始化代码
-      测试执行结果 = 测试对象.实例执行(&测试.代码)
-      测试对象.实例执行(&@回收代码) if @回收代码
-      return false if 测试执行结果 == false
+      begin
+        测试对象 = R对象.新建
+        测试对象.实例执行(&@初始化代码) if @初始化代码
+        测试执行结果 = 测试对象.实例执行(&测试.代码)
+        测试对象.实例执行(&@回收代码) if @回收代码
+        return false if 测试执行结果 == false
+      rescue LocalJumpError => 跳转错误
+        return false if 跳转错误.exit_value == false
+      end
     end
     return true
   rescue E异常 => 异常
