@@ -7,7 +7,7 @@ class Module
   def method_added(方法名称)
     原方法名 = @@中文化方法映射[方法名称]
     重命名方法(原方法名, 方法名称) if 原方法名
-    私有 方法名称 if 方法名称 == :初始化
+    私有方法(方法名称) if 方法名称 == :初始化
     _old_method_added_(方法名称)
   end
 end

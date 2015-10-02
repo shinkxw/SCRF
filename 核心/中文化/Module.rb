@@ -15,7 +15,7 @@ class Module
   alias :带参执行 :module_exec
   alias :字符串 :to_s
   alias :重命名方法 :alias_method
-  alias :公共 :public
-  alias :私有 :private
-  alias :保护 :protected
+  alias :公共方法 :public
+  alias :保护方法 :protected
+  alias :私有方法 :private
 end
