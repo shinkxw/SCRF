@@ -21,4 +21,5 @@ class Object
   alias :删除实例变量 :remove_instance_variable
   alias :单例类 :singleton_class
   alias :单例方法 :singleton_methods
+  alias :定义单例方法 :define_singleton_method
 end
