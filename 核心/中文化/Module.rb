@@ -18,4 +18,6 @@ class Module
   alias :公共方法 :public
   alias :保护方法 :protected
   alias :私有方法 :private
+  alias :获取常量 :const_get
+  alias :定义常量 :const_set
 end
