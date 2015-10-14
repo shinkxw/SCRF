@@ -1,6 +1,9 @@
 ﻿#!/usr/bin/env ruby -w
 # encoding: UTF-8
 class Module
+  class << self
+    alias :嵌套信息 :nesting
+  end
   alias :名称 :name
   alias :可读属性 :attr_reader
   alias :可读写属性 :attr_accessor
@@ -15,6 +18,10 @@ class Module
   alias :带参执行 :module_exec
   alias :字符串 :to_s
   alias :重命名方法 :alias_method
+  alias :定义了方法? :method_defined?
+  alias :定义了公共方法? :public_method_defined?
+  alias :定义了保护方法? :protected_method_defined?
+  alias :定义了私有方法? :private_method_defined?
   alias :公共方法 :public
   alias :保护方法 :protected
   alias :私有方法 :private
