@@ -5,6 +5,8 @@ class String
   alias :大小 :size
   alias :编码 :encoding
   alias :包含? :include?
+  alias :开始于? :start_with?
+  alias :结束于? :end_with?
   alias :编码为 :encode
   alias :识别为 :force_encoding
   alias :扫描 :scan
