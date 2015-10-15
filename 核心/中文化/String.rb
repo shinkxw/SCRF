@@ -21,6 +21,7 @@ class String
   alias :去尾 :chop
   alias :替换 :gsub
   alias :整数化 :to_i
+  alias :浮点化 :to_f
   alias :符号化 :to_sym
   alias :字符串化 :to_s
 end
