@@ -13,6 +13,7 @@ R数值 = Numeric
 R整数 = Integer
 R范围 = Range
 R结构体 = Struct
+R函数 = Proc
 R进程 = Process
 R枚举 = Enumerable
 R异常 = Exception
