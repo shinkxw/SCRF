@@ -1,0 +1,186 @@
+﻿#!/usr/bin/env ruby -w
+# encoding: UTF-8
+
+#Θ(n^2)
+#bubble sort 冒泡排序
+def bubble_sort(a)
+  (a.size-2).downto(0) do |i|
+    (0..i).each do |j|
+      a[j], a[j+1] = a[j+1], a[j] if a[j] > a[j+1]
+    end
+  end
+  return a
+end
+#selection sort 选择排序
+def selection_sort(a)
+  b = []
+  a.size.times do |i|
+    min = a.min
+    b << min
+    a.delete_at(a.index(min))
+  end
+  return b
+end
+#insertion sort 插入排序
+def insertion_sort(a)
+  a.each_with_index do |el,i|
+    j = i - 1
+      while j >= 0
+        break if a[j] <= el
+        a[j + 1] = a[j]
+        j -= 1
+      end
+    a[j + 1] = el
+  end
+  return a
+end
+#Shell sort 希尔排序
+def shell_sort(a)
+  gap = a.size
+  while(gap > 1)
+    gap = gap / 2
+    (gap..a.size-1).each do |i|
+      j = i
+      while(j > 0)
+        a[j], a[j-gap] = a[j-gap], a[j] if a[j] <= a[j-gap]
+        j = j - gap
+      end
+    end
+  end
+  return a
+end
+#Θ(n*logn)
+#Merge sort 归并排序
+def merge(l, r)
+  result = []
+  while l.size > 0 and r.size > 0 do
+    if l.first < r.first
+      result << l.shift
+    else
+      result << r.shift
+    end
+  end
+  if l.size > 0
+    result += l
+  end
+  if r.size > 0
+    result += r
+  end
+  return result
+end
+def merge_sort(a)
+  return a if a.size <= 1
+  middle = a.size / 2
+  left = merge_sort(a[0, middle])
+  right = merge_sort(a[middle, a.size - middle])
+  merge(left, right)
+end
+#Heap sort 堆排序
+def heapify(a, idx, size)
+  left_idx = 2 * idx + 1
+  right_idx = 2 * idx + 2
+  bigger_idx = idx
+  bigger_idx = left_idx if left_idx < size && a[left_idx] > a[idx]
+  bigger_idx = right_idx if right_idx < size && a[right_idx] > a[bigger_idx]
+  if bigger_idx != idx
+    a[idx], a[bigger_idx] = a[bigger_idx], a[idx]
+    heapify(a, bigger_idx, size)
+  end
+end
+
+def build_heap(a)
+  last_parent_idx = a.length / 2 - 1
+  i = last_parent_idx
+  while i >= 0
+    heapify(a, i, a.size)
+    i = i - 1
+  end
+end
+
+def heap_sort(a)
+  return a if a.size <= 1
+  size = a.size
+  build_heap(a)
+  while size > 0
+    a[0], a[size-1] = a[size-1], a[0]
+    size = size - 1
+    heapify(a, 0, size)
+  end
+  return a
+end
+#quick sort 快速排序
+def quick_sort(a)
+  (x=a.pop) ? quick_sort(a.select{|i| i <= x}) + [x] + quick_sort(a.select{|i| i > x}) : []
+end
+#Θ(n)
+#counting sort 计数排序
+def counting_sort(a)
+  min = a.min
+  max = a.max
+  counts = Array.new(max-min+1, 0)
+
+  a.each do |n|
+    counts[n-min] += 1
+  end
+
+  (0...counts.size).map{|i| [i+min]*counts[i]}.flatten
+end
+#Radix sort 基数排序
+def kth_digit(n, i)
+  while(i > 1)
+    n = n / 10
+    i = i - 1
+  end
+  n % 10
+end
+
+def radix_sort(a)
+  max = a.max
+  d = Math.log10(max).floor + 1
+
+  (1..d).each do |i|
+    tmp = []
+    (0..9).each do |j|
+      tmp[j] = []
+    end
+
+    a.each do |n|
+      kth = kth_digit(n, i)
+      tmp[kth] << n
+    end
+    a = tmp.flatten
+  end
+  return a
+end
+#bucket sort 桶排序
+def quick_sort(a)
+  (x=a.pop) ? quick_sort(a.select{|i| i <= x}) + [x] + quick_sort(a.select{|i| i > x}) : []
+end
+
+def first_number(n)
+  (n * 10).to_i
+end
+
+def bucket_sort(a)
+  tmp = []
+  (0..9).each do |j|
+    tmp[j] = []
+  end
+  
+  a.each do |n|
+    k = first_number(n)
+    tmp[k] << n
+  end
+
+  (0..9).each do |j|
+    tmp[j] = quick_sort(tmp[j])
+  end
+
+  tmp.flatten
+end
+
+a = [0.75, 0.13, 0, 0.44, 0.55, 0.01, 0.98, 0.1234567]
+p bucket_sort(a)
+
+# Result: 
+[0, 0.01, 0.1234567, 0.13, 0.44, 0.55, 0.75, 0.98]
