@@ -20,6 +20,7 @@ class String
   alias :靠右 :rjust
   alias :去尾 :chop
   alias :替换 :gsub
+  alias :数值化 :ord
   alias :整数化 :to_i
   alias :浮点化 :to_f
   alias :符号化 :to_sym
