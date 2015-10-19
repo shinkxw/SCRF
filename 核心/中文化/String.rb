@@ -9,12 +9,16 @@ class String
   alias :结束于? :end_with?
   alias :编码为 :encode
   alias :识别为 :force_encoding
+  alias :每个字符 :each_char
+  alias :每行 :each_line
   alias :扫描 :scan
   alias :分割 :split
   alias :大写 :upcase
   alias :大写! :upcase!
   alias :小写 :downcase
   alias :小写! :downcase!
+  alias :逆序 :reverse
+  alias :逆序! :reverse!
   alias :居中 :center
   alias :靠左 :ljust
   alias :靠右 :rjust

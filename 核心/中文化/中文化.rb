@@ -12,6 +12,7 @@ R哈希 = Hash
 R数值 = Numeric
 R整数 = Integer
 R范围 = Range
+R编码 = Encoding
 R结构体 = Struct
 R函数 = Proc
 R进程 = Process
