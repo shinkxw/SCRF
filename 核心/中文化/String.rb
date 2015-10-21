@@ -9,6 +9,7 @@ class String
   alias :结束于? :end_with?
   alias :编码为 :encode
   alias :识别为 :force_encoding
+  alias :字符数组 :chars
   alias :每个字符 :each_char
   alias :每行 :each_line
   alias :扫描 :scan
