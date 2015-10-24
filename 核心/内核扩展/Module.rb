@@ -9,7 +9,7 @@ class Module
   alias :_old_method_added_ :method_added
   @@方法映射 = {初始化: 'initialize', 每个: 'each'}
   @@方法映射.合并!({方法缺失: 'method_missing', 幽灵方法?: 'respond_to_missing?'})
-  @@忽略方法名称 = %w(initialize)
+  @@忽略方法名称 = %w(initialize method_missing respond_to_missing?)
   def method_added(方法名称)
     原方法名 = @@方法映射[方法名称]
     if 原方法名
