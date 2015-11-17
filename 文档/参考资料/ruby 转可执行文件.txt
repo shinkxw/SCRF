@@ -1,0 +1,1 @@
+ocra --no-autoload --add-all-core --windows test.rb Ruby22-x64\lib\tcltk
