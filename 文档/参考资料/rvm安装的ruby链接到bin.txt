@@ -1,0 +1,1 @@
+sudo ln -s /home/shink/.rvm/rubies/ruby-2.2.2/bin/ruby /usr/bin/ruby
