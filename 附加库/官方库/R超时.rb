@@ -6,7 +6,7 @@ class << R超时
   alias :超时 :timeout
 end
 
-module Kernel
+module R内核
   def 限时(限制秒数, 超时异常 = E超时异常, &块);R超时::超时(限制秒数, 超时异常, &块) end
 end
 
