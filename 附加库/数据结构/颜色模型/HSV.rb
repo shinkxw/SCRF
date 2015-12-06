@@ -40,9 +40,9 @@ module SCRF
     def 字符串;"<HSV: #{@色调}, #{@饱和度}, #{@亮度}>" end
     alias :to_s :字符串
   end
-  定义测试集 'HSV测试' do
+  描述 HSV do
     添加测试 'RGB转换测试' do
-      HSV.新建(175,0.3,102).转换为RGB.字符串.应该为 '<RGB: 71, 102, 99>'
+      期望(HSV.新建(175,0.3,102).转换为RGB.字符串).等于 '<RGB: 71, 102, 99>'
     end
   end
 end

@@ -44,13 +44,13 @@ module SCRF
     alias :to_s :字符串
   end
   
-  定义测试集 'RGB测试' do
+  描述 RGB do
     添加测试 'Hex转换测试' do
-      RGB.新建('#47A26F').转换为hex.应该为 '#47A26F'
+      期望(RGB.新建('#47A26F').转换为hex).等于 '#47A26F'
     end
     
     添加测试 'HSV转换测试' do
-      RGB.新建(71,102,99).转换为HSV.字符串.应该为 '<HSV: 174, 0.3, 102>'
+      期望(RGB.新建(71,102,99).转换为HSV.字符串).等于 '<HSV: 174, 0.3, 102>'
     end
   end
 end
