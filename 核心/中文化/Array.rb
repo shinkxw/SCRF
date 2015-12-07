@@ -3,11 +3,13 @@
 class Array
   alias :初始化 :initialize
   alias :每个 :each
+  alias :每个索引 :each_index
   alias :长度 :length
   alias :大小 :size
   alias :为空? :empty?
   alias :前 :first
   alias :后 :last
+  alias :末尾 :last
   alias :连接 :join
   alias :连接数组 :concat
   alias :重整 :flatten
@@ -25,8 +27,9 @@ class Array
   alias :出栈 :pop
   alias :插入 :unshift
   alias :去首 :shift
-  alias :末尾 :last
   alias :取样 :sample
+  alias :洗牌 :shuffle
+  alias :洗牌! :shuffle!
   alias :转置 :transpose
   alias :乘积 :product
   #Enumerable同名

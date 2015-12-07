@@ -11,6 +11,7 @@ R数组 = Array
 R哈希 = Hash
 R数值 = Numeric
 R整数 = Integer
+R浮点数 = Float
 R范围 = Range
 R目录 = Dir
 R文件 = File
