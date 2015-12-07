@@ -5,4 +5,6 @@ class Time
     alias :现在 :now
   end
   alias :字符串 :to_s
+  alias :整数化 :to_i
+  alias :浮点化 :to_f
 end
