@@ -4,9 +4,7 @@ class D二维向量
   def self.随机(x,y);self.新建(rand(x),rand(y)) end
   可读属性 :x, :y
   def 初始化(x, y);@x, @y = x, y end
-  def 等于?(向量)
-    (@x - 向量.x).绝对值 < 0.001 && (@y - 向量.y).绝对值 < 0.001
-  end
+  def 等于?(向量);(@x - 向量.x).绝对值 < 0.001 && (@y - 向量.y).绝对值 < 0.001 end
   def 反转;类.新建(-@x, -@y) end
   def x反转;类.新建(-@x, @y) end
   def y反转;类.新建(@x, -@y) end

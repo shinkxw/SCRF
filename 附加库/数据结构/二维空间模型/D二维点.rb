@@ -9,6 +9,7 @@ class D二维点
   def 取低(点);类.新建(@x.较小(点.x),@y.较小(点.y)) end
   def 取高(点);类.新建(@x.较大(点.x),@y.较大(点.y)) end
   def 变动(x,y);类.新建(@x + x, @y + y) end
+  def 位移(向量);类.新建(@x + 向量.x, @y + 向量.y) end
   def 随机变动(max);变动(rand(max),rand(max)) end
   def x变动(x);类.新建(@x + x, @y) end
   def y变动(y);类.新建(@x, @y + y) end
