@@ -22,6 +22,7 @@ class Module
   alias :定义了公共方法? :public_method_defined?
   alias :定义了保护方法? :protected_method_defined?
   alias :定义了私有方法? :private_method_defined?
+  alias :模块函数 :module_function
   alias :公共方法 :public
   alias :保护方法 :protected
   alias :私有方法 :private
