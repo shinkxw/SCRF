@@ -3,7 +3,7 @@
 需要 'Win32API'
 module S键盘
   @获取按键状态 = Win32API.新建("user32","GetAsyncKeyState",['I'],'I')
-  def self.获取按键数组;@键名数组.找出全部{|名| 调用(名)}.收集{|名| 名.字符串[0..-2]} end
+  def self.获取按键数组;@键名数组.找出全部{|名| 调用(名)}.收集{|名| 名.字符串[1..-2]} end
   def self.method_missing(方法名, *参数)
     if @键位映射[方法名] != nil
       定义单例方法(方法名){@获取按键状态.call(@键位映射[方法名]) & 65535 > 0}
@@ -12,7 +12,7 @@ module S键盘
       super
     end
   end
-  @键名数组 = %w(BACK TAB RETURN SHIFT CTRL ALT PAUSE CAPITAL ESCAPE SPACE PRIOR NEXT END HOME)
+  @键名数组 = %w(BACK TAB ENTER SHIFT CTRL ALT PAUSE CAPITAL ESC SPACE PGUP PGDN END HOME)
   @键名数组 += %w(LEFT UP RIGHT DOWN SELECT PRINT SNAPSHOTey INSERT DELETE)
   @键名数组 += %w(0 1 2 3 4 5 6 7 8 9)
   @键名数组 += %w(A B C D E F G H I J K L M N O P Q R S T U V W X Y Z)
