@@ -1,7 +1,7 @@
 ﻿#!/usr/bin/env ruby -w
 # encoding: UTF-8
 class D矩形
-  def self.随机(长,宽);D矩形.新建(随机(长),随机(宽)) end
+  def self.随机(长, 宽);D矩形.新建(rand(长), rand(宽)) end
   可读属性 :长, :宽#对应x, y二轴
   def 初始化(长, 宽);@长, @宽 = 长, 宽 end
   def 等于?(矩形);@长 == 矩形.长 && @宽 == 矩形.宽 end

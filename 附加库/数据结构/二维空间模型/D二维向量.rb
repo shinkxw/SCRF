@@ -1,7 +1,7 @@
 ﻿#!/usr/bin/env ruby -w
 # encoding: UTF-8
 class D二维向量
-  def self.随机(x,y);self.新建(随机(x), 随机(y)) end
+  def self.随机(x, y);self.新建(rand(x), rand(y)) end
   可读属性 :x, :y
   def 初始化(x, y);@x, @y = x, y end
   def 等于?(向量);(@x - 向量.x).绝对值 < 0.001 && (@y - 向量.y).绝对值 < 0.001 end
