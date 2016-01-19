@@ -39,6 +39,7 @@ class D优先队列
     end
     @元素数组[索引] = 下滤元素
   end
+  def 字符串;@元素数组.字符串 end
 end
 
 描述 D优先队列 do
