@@ -5,7 +5,7 @@ module S混入强化
     def 初始化;super "不能定义多个包含区块" end
   end
 
-  def self.被扩展时(基类)
+  def self.extended(基类)
     基类.设置实例变量(:@_依赖数组, [])
   end
 
