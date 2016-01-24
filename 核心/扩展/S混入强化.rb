@@ -1,8 +1,8 @@
 ﻿#!/usr/bin/env ruby -w
 # encoding: UTF-8
 module S混入强化
-  class E多个包含区块 < R标准错误
-    def 初始化;super "不能定义多个包含区块" end
+  class E多个包含时执行区块 < R标准错误
+    def 初始化;super "不能定义多个包含时执行区块" end
   end
 
   def self.extended(基类)
@@ -22,13 +22,9 @@ module S混入强化
     end
   end
 
-  def included(基类 = nil, &包含时执行代码)
-    if 基类.为无?
-      引发 E多个包含区块 if 定义了实例变量?(:@_包含时执行代码)
-      @_包含时执行代码 = 包含时执行代码
-    else
-      super
-    end
+  def 包含时执行(&包含时执行代码)
+    引发 E多个包含时执行区块 if 定义了实例变量?(:@_包含时执行代码)
+    @_包含时执行代码 = 包含时执行代码
   end
 
   def 定义类方法(&方法定义)
