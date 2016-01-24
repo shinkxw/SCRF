@@ -3,7 +3,7 @@
 class Module
   @@限制类型 = %w(公共 保护 私有)
   def 方法调用限制类型(方法名称)
-    @@限制类型.each{|类型| return 类型 if 调用("定义了#{类型}方法?", 方法名称)}
+    @@限制类型.每个{|类型| return 类型 if 调用("定义了#{类型}方法?", 方法名称)}
     nil
   end
   alias :_old_method_added_ :method_added

@@ -8,13 +8,14 @@ class Object
   alias :是? :is_a?
   alias :属于? :kind_of?
   alias :响应? :respond_to?
+  alias :为无? :nil?
   alias :克隆 :clone
   alias :复制 :dup
   alias :自己 :tap
   alias :扩展 :extend
   alias :实例执行 :instance_eval
   alias :实例带参执行 :instance_exec
-  alias :实例变量已定义? :instance_variable_defined?
+  alias :定义了实例变量? :instance_variable_defined?
   alias :实例变量 :instance_variables 
   alias :设置实例变量 :instance_variable_set
   alias :获取实例变量 :instance_variable_get
