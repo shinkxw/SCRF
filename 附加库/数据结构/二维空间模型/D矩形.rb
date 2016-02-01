@@ -1,5 +1,6 @@
 ﻿#!/usr/bin/env ruby -w
 # encoding: UTF-8
+需要类 'D矩形区域'
 class D矩形
   def self.随机(长, 宽);D矩形.新建(rand(长), rand(宽)) end
   可读属性 :长, :宽#对应x, y二轴

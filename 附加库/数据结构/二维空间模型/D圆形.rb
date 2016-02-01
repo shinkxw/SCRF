@@ -1,5 +1,6 @@
 ﻿#!/usr/bin/env ruby -w
 # encoding: UTF-8
+需要类 'D圆形区域'
 class D圆形
   def self.随机(半径);D圆形.新建(rand(半径)) end
   可读属性 :半径
