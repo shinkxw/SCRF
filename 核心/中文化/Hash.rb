@@ -7,6 +7,8 @@ class Hash
   alias :数量 :size
   alias :每个键 :each_key
   alias :每个值 :each_value 
+  alias :删除 :delete
+  alias :条件删除 :delete_if
   alias :清空 :clear
   alias :默认值 :default
   alias :删除 :delete
