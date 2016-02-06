@@ -12,7 +12,10 @@ class Tk画布
     x轴卷动增量(x轴增量)
     y轴卷动增量(y轴增量)
   end
+  def 全部删除;删除('all') end
   alias :删除 :delete
+  alias :添加标签 :addtag#标签, 'withtag', (编号|标签)
+  alias :删除标签 :deltag#编号, 标签 | 范围标签, 删除标签 | 标签
   alias :移动组件 :move#tag,dx,dy
   alias :移动组件至 :move_to#tag,dx,dy
   alias :改变组件位置 :coords#组件,参数
