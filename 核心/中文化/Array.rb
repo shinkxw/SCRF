@@ -22,6 +22,8 @@ class Array
   alias :排序根据! :sort_by!
   alias :去重 :uniq
   alias :去重! :uniq!
+  alias :去无 :compact
+  alias :去无! :compact!
   alias :替换! :collect!
   alias :入栈 :push
   alias :出栈 :pop
