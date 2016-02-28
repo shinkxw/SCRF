@@ -8,6 +8,7 @@ module Enumerable
   alias :数量 :count
   alias :找出 :find
   alias :找出全部 :find_all
+  alias :排除 :reject
   alias :收集 :collect
   alias :检索 :grep
   alias :注入 :inject
@@ -25,5 +26,8 @@ module Enumerable
   alias :循环 :cycle
   alias :收集并重整 :flat_map
   alias :前 :first
+  alias :获取 :take
   alias :每片 :each_slice
+  alias :惰性化 :lazy
+  alias :数组化 :to_a
 end
