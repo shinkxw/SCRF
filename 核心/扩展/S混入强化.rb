@@ -1,5 +1,6 @@
 ﻿#!/usr/bin/env ruby -w
 # encoding: UTF-8
+#用于扩展模块功能 使用 扩展 S混入强化 引入
 module S混入强化
   class E多个包含时执行区块 < R标准错误
     def 初始化;super "不能定义多个包含时执行区块" end
