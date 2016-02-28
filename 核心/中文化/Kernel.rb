@@ -3,6 +3,7 @@
 module Kernel
   alias :需要 :require
   alias :需要类 :require_relative
+  alias :需要模块 :require_relative
   alias :引发 :raise
   alias :捕获 :catch
   alias :抛出 :throw
