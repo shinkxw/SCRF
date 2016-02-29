@@ -26,6 +26,9 @@ class Module
   alias :定义常量 :const_set
   alias :设置常量 :const_set
   alias :获取常量 :const_get
+  alias :定义了类变量? :class_variable_defined?
+  alias :设置类变量 :class_variable_set
+  alias :获取类变量 :class_variable_get
   alias :模块函数 :module_function
   alias :公共方法 :public
   alias :保护方法 :protected
