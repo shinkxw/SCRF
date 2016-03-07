@@ -24,6 +24,7 @@ class String
   alias :靠左 :ljust
   alias :靠右 :rjust
   alias :去尾 :chop
+  alias :尾部去除 :chomp
   alias :替换 :gsub
   alias :数值化 :ord
   alias :整数化 :to_i
