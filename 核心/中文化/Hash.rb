@@ -17,6 +17,7 @@ class Hash
   alias :含有值? :has_value?
   alias :合并 :merge
   alias :合并! :merge!
+  alias :倒置 :invert
   alias :所有键 :keys
   alias :所有值 :values  
 end
