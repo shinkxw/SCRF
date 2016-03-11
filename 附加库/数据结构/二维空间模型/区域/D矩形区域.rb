@@ -1,6 +1,6 @@
 ﻿#!/usr/bin/env ruby -w
 # encoding: UTF-8
-需要类 'D区域'
+需要 'D区域'
 class D矩形区域 < D区域
   可读属性 :低点, :高点
   def self.创建(低点x, 低点y, 高点x, 高点y);新建(D二维点.新建(低点x, 低点y), D二维点.新建(高点x, 高点y)) end

@@ -1,6 +1,6 @@
 ﻿#!/usr/bin/env ruby -w
 # encoding: UTF-8
-需要类 'D区域'
+需要 'D区域'
 class D圆形区域 < D区域
   可读属性 :圆心, :半径
   def self.创建(圆心x, 圆心y, 半径);新建(D二维点.新建(圆心x, 圆心y), 半径) end
