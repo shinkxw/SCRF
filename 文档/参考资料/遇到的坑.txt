@@ -1,1 +1,2 @@
 ﻿不要使用内容会改变的Struct对象作为hash的键, 同一个Struct对象的hash方法生成的值是根据其内容进行变化的
+使用-E选项改变外部编码,如ruby -E UTF-8 try.rb
