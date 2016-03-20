@@ -34,6 +34,7 @@ class Array
   alias :洗牌! :shuffle!
   alias :转置 :transpose
   alias :乘积 :product
+  alias :打包 :pack
   #Enumerable同名
   alias :全部? :all?
   alias :有些? :any?
