@@ -6,7 +6,7 @@ class Enumerator::Lazy
   alias :排除 :reject
   alias :检索 :grep
   alias :获取 :take
-  alias :打包 :zip
+  alias :外转置 :zip
   alias :收集并重整 :flat_map
   alias :惰性 :lazy
   alias :字符串 :to_s

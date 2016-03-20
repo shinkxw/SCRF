@@ -54,6 +54,6 @@ class Array
   alias :排序 :sort
   alias :排序根据 :sort_by
   alias :分组根据 :group_by
-  alias :打包 :zip
+  alias :外转置 :zip
   alias :循环 :cycle
 end
