@@ -11,6 +11,7 @@ module Kernel
   alias :随机 :rand
   alias :调用信息 :caller
   alias :循环 :loop
+  alias :函数 :proc
   alias :暂停 :sleep
   alias :格式化 :format
   alias :作用域 :binding

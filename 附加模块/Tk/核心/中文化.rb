@@ -2,6 +2,7 @@
 # encoding: UTF-8
 Tk内核 = TkKernel
 Tk对象 = TkObject
+Tk绑定 = TkBindCore
 Tk主界面 = TkRoot
 Tk窗口 = TkWindow
 Tk标签 = TkLabel

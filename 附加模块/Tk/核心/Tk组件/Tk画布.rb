@@ -13,6 +13,11 @@ class Tk画布
     y轴卷动增量(y轴增量)
   end
   def 全部删除;删除('all') end
+  def 记录鼠标坐标
+    需要 'D二维点'
+    绑定("Motion", 函数{|x, y| @鼠标坐标 = D二维点.新建(x, y)}, "%x %y")
+  end
+  def 鼠标坐标;@鼠标坐标 end
   alias :删除 :delete
   alias :添加标签 :addtag#标签, 'withtag', (编号|标签)
   alias :删除标签 :deltag#编号, 标签 | 范围标签, 删除标签 | 标签
