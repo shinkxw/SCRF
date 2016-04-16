@@ -6,7 +6,7 @@ class Hash
   alias :大小 :size
   alias :数量 :size
   alias :每个键 :each_key
-  alias :每个值 :each_value 
+  alias :每个值 :each_value
   alias :删除 :delete
   alias :条件删除 :delete_if
   alias :清空 :clear
@@ -19,5 +19,5 @@ class Hash
   alias :合并! :merge!
   alias :倒置 :invert
   alias :所有键 :keys
-  alias :所有值 :values  
+  alias :所有值 :values
 end

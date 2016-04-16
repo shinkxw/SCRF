@@ -4,6 +4,7 @@ class String
   alias :长度 :length
   alias :大小 :size
   alias :编码 :encoding
+  alias :为空? :empty?
   alias :包含? :include?
   alias :开始于? :start_with?
   alias :结束于? :end_with?
@@ -14,6 +15,7 @@ class String
   alias :每行 :each_line
   alias :扫描 :scan
   alias :分割 :split
+  alias :删除 :delete
   alias :大写 :upcase
   alias :大写! :upcase!
   alias :小写 :downcase
