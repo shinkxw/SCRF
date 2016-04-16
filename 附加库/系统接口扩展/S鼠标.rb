@@ -2,9 +2,9 @@
 # encoding: UTF-8
 需要 'Win32接口'
 module S鼠标
-  @获取鼠标位置 = Win32接口.新建("GetCursorPos", ['P'], 'V', "user32")
-  @设置鼠标位置 = Win32接口.新建("SetCursorPos", ['I']*2, 'V', "user32")
-  @鼠标事件 = Win32接口.新建("mouse_event", ['L']*5, 'V', "user32")
+  @获取鼠标位置 = Win32接口.新建("GetCursorPos", 'P', 'V', "user32")
+  @设置鼠标位置 = Win32接口.新建("SetCursorPos", 'II', 'V', "user32")
+  @鼠标事件 = Win32接口.新建("mouse_event", 'LLLLL', 'V', "user32")
   def self.位置
     结果 = " " * 8
     @获取鼠标位置.请求(结果)

@@ -2,7 +2,7 @@
 # encoding: UTF-8
 需要 'Win32接口'
 module S键盘
-  @获取按键状态 = Win32接口.新建("GetAsyncKeyState", ['I'], 'I', "user32")
+  @获取按键状态 = Win32接口.新建("GetAsyncKeyState", 'I', 'I', "user32")
   def self.获取按键数组;@键名数组.找出全部{|名| 调用(名)}.收集{|名| 名.字符串[1..-2]} end
   def self.method_missing(方法名, *参数)
     if @键位映射[方法名]
