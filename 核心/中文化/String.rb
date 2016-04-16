@@ -22,6 +22,12 @@ class String
   alias :小写! :downcase!
   alias :逆序 :reverse
   alias :逆序! :reverse!
+  alias :去空 :strip
+  alias :去空! :strip!
+  alias :去前空 :lstrip
+  alias :去前空! :lstrip!
+  alias :去后空 :rstrip
+  alias :去后空! :rstrip!
   alias :居中 :center
   alias :靠左 :ljust
   alias :靠右 :rjust
