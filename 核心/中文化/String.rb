@@ -14,6 +14,7 @@ class String
   alias :每个字符 :each_char
   alias :每行 :each_line
   alias :扫描 :scan
+  alias :匹配 :match
   alias :分割 :split
   alias :删除 :delete
   alias :大写 :upcase
