@@ -28,6 +28,7 @@ R异常 = Exception
 R线程 = Thread
 R时间 = Time
 R数学 = Math
+R序列化 = Marshal
 R断点 = TracePoint
 R绑定 = Binding
 R标准错误 = StandardError
