@@ -3,6 +3,7 @@
 class File
   class << self
     alias :打开 :open#"#{@file_path}","r:#{@encode}"
+    alias :删除 :delete
     alias :目录名称 :dirname
     alias :扩展名 :extname
     alias :存在? :exist?
