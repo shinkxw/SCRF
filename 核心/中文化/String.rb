@@ -12,6 +12,7 @@ class String
   alias :识别为 :force_encoding
   alias :字符数组 :chars
   alias :每个字符 :each_char
+  alias :每个字节 :each_byte
   alias :每行 :each_line
   alias :扫描 :scan
   alias :匹配 :match
