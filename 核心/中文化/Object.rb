@@ -5,7 +5,8 @@ class Object
   alias :调用 :public_send
   alias :强制调用 :__send__
   alias :对象编号 :object_id
-  alias :方法 :methods
+  alias :方法 :method
+  alias :所有方法 :methods
   alias :是? :is_a?
   alias :属于? :kind_of?
   alias :响应? :respond_to?
