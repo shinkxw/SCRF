@@ -31,7 +31,9 @@ class Array
   alias :去首 :shift
   alias :取样 :sample
   alias :洗牌 :shuffle
+  alias :打乱 :shuffle
   alias :洗牌! :shuffle!
+  alias :打乱! :shuffle!
   alias :转置 :transpose
   alias :乘积 :product
   alias :打包 :pack
