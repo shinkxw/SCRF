@@ -1,6 +1,7 @@
 ﻿#!/usr/bin/env ruby -w
 # encoding: UTF-8
 module Kernel
+  alias :加载 :load
   alias :需要 :require
   alias :需要类 :require_relative
   alias :需要模块 :require_relative
