@@ -4,11 +4,13 @@ module Kernel
   alias :需要 :require
   alias :需要类 :require_relative
   alias :需要模块 :require_relative
+  alias :退出 :exit
   alias :引发 :raise
   alias :捕获 :catch
   alias :抛出 :throw
   alias :打开 :open
   alias :随机 :rand
+  alias :系统执行 :system
   alias :调用信息 :caller
   alias :循环 :loop
   alias :函数 :proc
