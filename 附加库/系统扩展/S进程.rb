@@ -8,6 +8,7 @@ class << S进程
   alias :所有进程 :ps
   alias :所有字段 :fields
   def 当前进程;获取(R进程.pid) end
+  def 当前父进程;获取(R进程.ppid) end
 end
 class Struct::ProcTableStruct
   def 父进程;S进程.获取(ppid) end
