@@ -39,7 +39,7 @@ class Array
   alias :打包 :pack
   #Enumerable同名
   alias :全部? :all?
-  alias :有些? :any?
+  alias :任意? :any?
   alias :含有? :include?
   alias :包含? :include?
   alias :数量 :count
