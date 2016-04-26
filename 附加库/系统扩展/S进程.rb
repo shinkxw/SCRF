@@ -10,6 +10,7 @@ class << S进程
   def 当前进程;获取(R进程.pid) end
 end
 class Struct::ProcTableStruct
+  def 父进程;S进程.获取(ppid) end
   alias :标题 :caption
   alias :命令行 :cmdline
   alias :注释 :comm
