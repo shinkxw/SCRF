@@ -10,7 +10,7 @@ module S鼠标
     @获取鼠标位置.请求(结果)
     结果.解包("LL")
   end
-  def self.设置位置(x, y);@设置鼠标位置.请求(x, y) end
+  def self.移动至(x, y);@设置鼠标位置.请求(x, y) end
   def self.单击;按下左键;松开左键 end
   def self.双击;单击;单击 end
   def self.右键;按下右键;松开右键 end
