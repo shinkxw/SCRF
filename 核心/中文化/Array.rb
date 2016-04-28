@@ -37,6 +37,7 @@ class Array
   alias :转置 :transpose
   alias :乘积 :product
   alias :打包 :pack
+  alias :哈希化 :to_h
   #Enumerable同名
   alias :全部? :all?
   alias :任意? :any?
