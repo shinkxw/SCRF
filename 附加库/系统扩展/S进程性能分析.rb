@@ -12,6 +12,6 @@ module S进程性能分析
     alias :所有属性 :attributes
     def 进程id;id_process end
     def 名称;name end
-    def 处理器时间百分比;percent_processor_time end
+    def 处理器时间百分比;percent_processor_time.整数化 end
   end
 end
