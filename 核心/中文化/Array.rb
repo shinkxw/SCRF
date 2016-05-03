@@ -20,6 +20,8 @@ class Array
   alias :索引取值 :values_at
   alias :排序! :sort!
   alias :排序根据! :sort_by!
+  alias :逆序 :reverse
+  alias :逆序! :reverse!
   alias :去重 :uniq
   alias :去重! :uniq!
   alias :去无 :compact
@@ -59,4 +61,5 @@ class Array
   alias :分组根据 :group_by
   alias :外转置 :zip
   alias :循环 :cycle
+  alias :逆序每个 :reverse_each
 end
