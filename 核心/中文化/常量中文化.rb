@@ -30,6 +30,7 @@ R进程 = Process
 R时间 = Time
 R数学 = Math
 R序列化 = Marshal
+R垃圾回收 = GC
 R对象空间 = ObjectSpace
 R断点 = TracePoint
 R绑定 = Binding
