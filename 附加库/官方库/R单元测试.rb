@@ -13,8 +13,8 @@ end
 
 module R单元测试
   class << self
-    alias :执行 :run
-    alias :自动执行 :autorun
+    alias :运行 :run
+    alias :自动运行 :autorun
   end
   
   module Spec::DSL
@@ -90,7 +90,7 @@ module R单元测试
   class SummaryReporter
     def start
       super
-      io.puts "执行测试选项: #{options[:args]}"
+      io.puts "运行测试选项: #{options[:args]}"
       #io.puts
       io.puts "# 测试中:"
       io.puts
@@ -129,7 +129,7 @@ module R单元测试
     def 概要
       extra = ""
 
-      extra = "\n\n你跳过了测试. 使用--verbose选项执行查看详细信息." if
+      extra = "\n\n你跳过了测试. 使用--verbose选项运行查看详细信息." if
         results.any?(&:skipped?) unless options[:verbose] or ENV["MT_NO_SKIP_MSG"]
 
       "%d 测试, %d 断言, %d 失败, %d 错误, %d 跳过%s" % [count, assertions, failures, errors, skips, extra]
