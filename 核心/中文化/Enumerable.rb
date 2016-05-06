@@ -1,6 +1,7 @@
 ﻿#!/usr/bin/env ruby -w
 # encoding: UTF-8
 module Enumerable
+  alias :所有? :all?
   alias :全部? :all?
   alias :任意? :any?
   alias :含有? :include?

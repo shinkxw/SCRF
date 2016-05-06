@@ -41,6 +41,7 @@ class Array
   alias :打包 :pack
   alias :哈希化 :to_h
   #Enumerable同名
+  alias :所有? :all?
   alias :全部? :all?
   alias :任意? :any?
   alias :含有? :include?
