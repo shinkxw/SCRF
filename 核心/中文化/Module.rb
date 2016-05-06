@@ -14,7 +14,7 @@ class Module
   alias :先置模块 :prepend
   alias :执行 :module_eval
   alias :带参执行 :module_exec
-  alias :重命名方法 :alias_method
+  alias :设置方法别名 :alias_method
   alias :实例方法 :instance_methods
   alias :公共实例方法 :public_instance_methods
   alias :保护实例方法 :protected_instance_methods

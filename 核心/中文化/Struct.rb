@@ -8,12 +8,12 @@ class Struct
         单例类.执行 do
           定义方法(:新建) do |*参数|
             单例类.执行 do
-              重命名方法(:新建, :new)
+              设置方法别名(:新建, :new)
             end
             新建(*参数)
           end
         end
-        重命名方法(:字符串, :to_s)
+        设置方法别名(:字符串, :to_s)
       end
     end
   end
