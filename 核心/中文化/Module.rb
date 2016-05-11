@@ -35,8 +35,8 @@ class Module
   alias :获取类变量 :class_variable_get
   alias :删除类变量 :remove_class_variable
   alias :模块函数 :module_function
-  alias :公共方法 :public
-  alias :保护方法 :protected
-  alias :私有方法 :private
+  alias :公共 :public
+  alias :保护 :protected
+  alias :私有 :private
   alias :字符串 :to_s
 end

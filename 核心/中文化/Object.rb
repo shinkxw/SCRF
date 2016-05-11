@@ -6,7 +6,11 @@ class Object
   alias :强制调用 :__send__
   alias :对象编号 :object_id
   alias :方法 :method
+  alias :公共方法 :public_method
   alias :所有方法 :methods
+  alias :所有公共方法 :public_methods
+  alias :所有保护方法 :protected_methods
+  alias :所有私有方法 :private_methods
   alias :是? :is_a?
   alias :属于? :kind_of?
   alias :响应? :respond_to?
@@ -23,6 +27,7 @@ class Object
   alias :获取实例变量 :instance_variable_get
   alias :删除实例变量 :remove_instance_variable
   alias :单例类 :singleton_class
-  alias :单例方法 :singleton_methods
+  alias :单例方法 :singleton_method
+  alias :所有单例方法 :singleton_methods
   alias :定义单例方法 :define_singleton_method
 end
