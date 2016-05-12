@@ -35,3 +35,4 @@ R对象空间 = ObjectSpace
 R断点 = TracePoint
 R绑定 = Binding
 R标准错误 = StandardError
+R环境 = ENV
