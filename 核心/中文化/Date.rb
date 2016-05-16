@@ -3,6 +3,7 @@
 require 'date'
 class Date
   class << self
+    alias :新建 :new
     alias :今天 :today
     alias :解析 :parse
   end
