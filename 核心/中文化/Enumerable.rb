@@ -28,6 +28,9 @@ module Enumerable
   alias :收集并重整 :flat_map
   alias :前 :first
   alias :获取 :take
+  alias :除去 :drop
+  alias :获取当 :take_while
+  alias :除去当 :drop_while
   alias :逆序每个 :reverse_each
   alias :每片 :each_slice
   alias :惰性化 :lazy

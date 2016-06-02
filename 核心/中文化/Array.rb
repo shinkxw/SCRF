@@ -49,8 +49,13 @@ class Array
   alias :数量 :count
   alias :找出 :find
   alias :找出全部 :find_all
+  alias :排除 :reject
   alias :收集 :collect
   alias :检索 :grep
+  alias :获取 :take
+  alias :除去 :drop
+  alias :获取当 :take_while
+  alias :除去当 :drop_while
   alias :注入 :inject
   alias :最大值 :max
   alias :最大值根据 :max_by

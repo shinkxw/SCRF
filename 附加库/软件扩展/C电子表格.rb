@@ -14,6 +14,8 @@ module C电子表格
     end
     class Worksheet
       alias :每行 :each
+      alias :所有行 :rows
+      alias :行 :row
     end
     class Row
       alias :格式 :format
