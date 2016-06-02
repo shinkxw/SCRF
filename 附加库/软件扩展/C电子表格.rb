@@ -5,6 +5,7 @@ C电子表格 = Spreadsheet
 module C电子表格
   class << self
     alias :编码 :client_encoding
+    alias :编码= :client_encoding=
     alias :打开 :open
   end
   module Excel
