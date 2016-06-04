@@ -17,6 +17,6 @@ class Struct
       end
     end
   end
-  alias :每对 :each_pair 
+  alias :每对 :each_pair
   alias :每个值 :each
 end

@@ -26,6 +26,7 @@ R迭代器 = Enumerator
 R异常 = Exception
 R纤程 = Fiber
 R线程 = Thread
+R互斥锁 = Mutex
 R进程 = Process
 R时间 = Time
 R日期 = Date
