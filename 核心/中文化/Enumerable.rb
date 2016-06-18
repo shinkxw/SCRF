@@ -26,6 +26,7 @@ module Enumerable
   alias :外转置 :zip
   alias :循环 :cycle
   alias :收集并重整 :flat_map
+  alias :划分区块 :chunk
   alias :前 :first
   alias :获取 :take
   alias :除去 :drop
