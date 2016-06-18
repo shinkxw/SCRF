@@ -39,4 +39,4 @@ R断点 = TracePoint
 R绑定 = Binding
 R标准错误 = StandardError
 R环境 = ENV
-R内联数据 = DATA
+R内联数据 = DATA if defined?(DATA)
