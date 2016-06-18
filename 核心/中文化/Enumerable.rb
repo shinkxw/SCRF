@@ -34,6 +34,8 @@ module Enumerable
   alias :除去当 :drop_while
   alias :逆序每个 :reverse_each
   alias :每片 :each_slice
+  alias :每个元素及索引 :each_with_index
+  alias :每个元素及对象 :each_with_object
   alias :惰性化 :lazy
   alias :数组化 :to_a
 end
