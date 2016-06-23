@@ -3,6 +3,7 @@
 class D二维向量
   def self.随机(x, y);新建(rand(2 * x) - x, rand(2 * y) - y) end
   def self.随机单位向量;随机(100, 100).单位向量 end
+  def self.零向量;新建(0, 0) end
   可读属性 :x, :y
   def 初始化(x, y);@x, @y = x, y end
   def 等于?(向量);(@x - 向量.x).绝对值 < 0.001 && (@y - 向量.y).绝对值 < 0.001 end
