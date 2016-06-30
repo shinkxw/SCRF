@@ -40,3 +40,6 @@ R绑定 = Binding
 R标准错误 = StandardError
 R环境 = ENV
 R内联数据 = DATA if defined?(DATA)
+R标准输入 = STDIN
+R标准输出 = STDOUT
+R标准错误输出 = STDERR
