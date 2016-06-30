@@ -15,7 +15,8 @@ class Module
   alias :执行 :module_eval
   alias :带参执行 :module_exec
   alias :设置方法别名 :alias_method
-  alias :实例方法 :instance_methods
+  alias :实例方法 :instance_method
+  alias :所有实例方法 :instance_methods
   alias :公共实例方法 :public_instance_methods
   alias :保护实例方法 :protected_instance_methods
   alias :私有实例方法 :private_instance_methods
