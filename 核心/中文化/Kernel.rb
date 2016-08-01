@@ -16,6 +16,7 @@ module Kernel
   alias :循环 :loop
   alias :函数 :proc
   alias :暂停 :sleep
+  alias :信号捕获 :trap
   alias :格式化 :format
   alias :作用域 :binding
   alias :上下文 :binding
