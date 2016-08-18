@@ -6,6 +6,9 @@ class Time
     alias :现在 :now
     alias :解析 :parse
   end
+  alias :年 :year
+  alias :月 :month
+  alias :日 :day
   alias :字符串转换 :strftime
   alias :字符串 :to_s
   alias :整数化 :to_i
