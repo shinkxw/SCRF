@@ -37,6 +37,10 @@ class Array
   alias :洗牌! :shuffle!
   alias :打乱! :shuffle!
   alias :转置 :transpose
+  alias :组合 :combination
+  alias :重复组合 :repeated_combination
+  alias :排列 :permutation
+  alias :重复排列 :repeated_permutation
   alias :乘积 :product
   alias :打包 :pack
   alias :哈希化 :to_h
