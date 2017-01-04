@@ -44,3 +44,6 @@ R内联数据 = DATA if defined?(DATA)
 R标准输入 = STDIN
 R标准输出 = STDOUT
 R标准错误输出 = STDERR
+Ruby版本 = RUBY_VERSION
+Ruby发布日期 = RUBY_RELEASE_DATE
+Ruby平台 = RUBY_PLATFORM
