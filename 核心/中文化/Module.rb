@@ -2,6 +2,7 @@
 # encoding: UTF-8
 class Module
   class << self
+    alias :常量 :constants 
     alias :嵌套信息 :nesting
   end
   alias :名称 :name
