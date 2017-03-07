@@ -37,4 +37,5 @@ class Module
     end
     _old_singleton_method_added_(方法名称)
   end
+  def 删除常量(常量名);实例执行{remove_const(常量名)} end
 end
