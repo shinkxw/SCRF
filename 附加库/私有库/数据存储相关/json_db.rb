@@ -9,8 +9,9 @@ module JsonDb
       @obj = load
     end
     def load_file;File.exist?(@file_path) ? File.open(@file_path, "r:UTF-8"){|f| f.read} : nil end
-    def save;save_file(@obj.to_json) end
+    def save;save_file(to_json) end
     def save_file(json);File.open(@file_path, "w:UTF-8"){|f| f.puts(json) } end
+    def to_json;@obj.to_json end
     def need_save_mathod?(mathod)
       @need_save_mathods ||= need_save_mathods
       @need_save_mathods.include?(mathod)
@@ -37,6 +38,6 @@ module JsonDb
       arr = json ? JSON.parse(json) : []
       arr.map{|obj| obj.is_a?(::Hash) ? OpenStruct.new(obj) : obj}
     end
-    def save;save_file(@obj.map(&:to_h).to_json) end
+    def to_json;@obj.map(&:to_h).to_json end
   end
 end
