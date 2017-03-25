@@ -4,5 +4,5 @@ class Binding
   alias :执行 :eval
   alias :定义了局部变量? :local_variable_defined?
   alias :设置局部变量 :local_variable_set
-  alias :获取设置局部变量局部变量 :local_variable_get
+  alias :获取局部变量 :local_variable_get
 end
