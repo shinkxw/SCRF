@@ -22,6 +22,8 @@ class Module
   alias :保护实例方法 :protected_instance_methods
   alias :私有实例方法 :private_instance_methods
   alias :定义方法 :define_method
+  alias :删除方法 :remove_method
+  alias :取消方法 :undef_method
   alias :定义了方法? :method_defined?
   alias :定义了公共方法? :public_method_defined?
   alias :定义了保护方法? :protected_method_defined?
