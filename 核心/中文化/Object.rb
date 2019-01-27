@@ -18,6 +18,7 @@ class Object
   alias :克隆 :clone
   alias :复制 :dup
   alias :自己 :tap
+  alias :然后 :then
   alias :扩展 :extend
   alias :实例执行 :instance_eval
   alias :实例带参执行 :instance_exec
